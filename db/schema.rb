@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_29_141611) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_29_145823) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -41,6 +41,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_29_141611) do
     t.index ["user_id"], name: "index_reunions_on_user_id"
   end
 
+  create_table "suggested_destinations", force: :cascade do |t|
+    t.integer "price"
+    t.string "destination_city"
+    t.integer "travel_time"
+    t.bigint "date_option_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["date_option_id"], name: "index_suggested_destinations_on_date_option_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -55,8 +65,25 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_29_141611) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "votes", force: :cascade do |t|
+    t.string "votable_type"
+    t.bigint "votable_id"
+    t.string "voter_type"
+    t.bigint "voter_id"
+    t.boolean "vote_flag"
+    t.string "vote_scope"
+    t.integer "vote_weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
+    t.index ["votable_type", "votable_id"], name: "index_votes_on_votable"
+    t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
+    t.index ["voter_type", "voter_id"], name: "index_votes_on_voter"
+  end
+
   add_foreign_key "date_options", "reunions"
   add_foreign_key "participations", "reunions"
   add_foreign_key "participations", "users"
   add_foreign_key "reunions", "users"
+  add_foreign_key "suggested_destinations", "date_options"
 end

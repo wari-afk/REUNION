@@ -1,1 +1,6 @@
 <h1>new reunion</h1>
+<%= simple_form_for @reunion do |f|%>
+  <%= f.input :name, placeholder: "Give your reunion a name" %>
+  <%= f.input :description, placeholder: "Tell us what you plan is" %>
+  <%= f.submit %>
+<% end %>

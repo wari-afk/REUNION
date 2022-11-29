@@ -1,6 +1,7 @@
 class ParticipationsController < ApplicationController
   def new
     @participation = Participation.new
+    @reunion = Reunion.find(params[:reunion_id])
   end
 
   def create

@@ -1,18 +1,16 @@
-<h1>create participations</h1>
-
-
-<%# <%= form_with url: users_path, method: :get do %>
-<%# <%= text_field_tag :query, %>
-  <%# params[:query], %>
-  <%# class: "form-control", %>
-  <%# placeholder: "Find a annoyance" %>
-  <%# <%= submit_tag "Search" %>
-<%# <% end %>
-
-<%# <%= simple_form_for @reunion do |f|%>
-  <%# <%= f.input :user_id, placeholder: "Give your friends id" %>
-  <%# <%= f.input :reunion_id, placeholder: "Give your friends id" %>
-  <%# <%= f.submit %>
-<%# <% end %>
-
+<div class="Addparticipant">
+  <div class="center">
+    <h1>Add participants for your reunion!</h1>
+  </div>
+  <div class="container">
+    <%= simple_form_for [@reunion, @participation] do |f|%>
+      <%= f.association :user,
+                        collection: User.all.where.not(id: current_user.id),
+                        input_html: { multiple: true },
+                        include_blank: false,
+                        include_hidden: false %>
+      <%= f.submit :add %>
+    <% end %>
+  </div>
+</div>
 <%= link_to "Go back", :back %>

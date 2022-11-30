@@ -1,5 +1,11 @@
 <h1>create participations</h1>
 
+<%= simple_form_for [@reunion, @participation] do |p|%>
+<%= simple_fields_for :other do |o|%>
+<%= o.input :email, as: :text %>
+<% end %>
+<%= p.submit %>
+<% end %>
 
 <%# <%= form_with url: users_path, method: :get do %>
 <%# <%= text_field_tag :query, %>

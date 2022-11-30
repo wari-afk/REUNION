@@ -15,6 +15,10 @@ class ReunionsController < ApplicationController
     end
   end
 
+  def show
+    @reunion = Reunion.find(params[:id])
+  end
+
   private
 
   def reunion_params

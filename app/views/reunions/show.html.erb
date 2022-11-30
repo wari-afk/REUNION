@@ -1,0 +1,28 @@
+
+<div class="reunion-show-banner mb-4">
+  <div class="container m-4">
+    <h1><strong><%= @reunion.name %></strong></h1>
+    <h2><%= @reunion.description %></h2>
+  </div>
+</div>
+<div class="container mb-3">
+  <div class="d-flex justify-content-between">
+    <div class="reunion_container_card">
+      <h2>Offered dates</h2>
+        <div class="reunion_show_card">
+          <%= link_to "1- Add date option", "#"%>
+        </div>
+    </div>
+    <div class="reunion_container_card">
+      <h2>Participants</h2>
+        <div class="reunion_show_card">
+          <%= link_to "2- Add participants", "#" %>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="container d-flex justify-content-center mb-4">
+  <div class="btn btn-success">
+    Notify your friends!
+  </div>
+</div>

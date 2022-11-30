@@ -1,5 +1,43 @@
 h1 {
   justify-content: center;
   font-weight: 300;
-  margin: auto;
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  font-size: 50px;
+  color: #1fd79d;
+}
+
+h3 {
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  font-weight: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: gray;
+}
+
+p {
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  font-weight: 300px;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  color: #a89999;
 }

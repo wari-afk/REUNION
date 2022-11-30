@@ -1,55 +1,77 @@
 <div class="banner" style="background-color: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
   <h1 class="reunion-home">REUNION</h1>
     <p class="button">
-    .text 
       <%= link_to "Create a Reunion", new_reunion_path, class: "btn"%>
     </p>
 </div>
 
-<p><strong> Plan your travel and meet up in the city of your choice</strong></p>
-  <div class="gallery-slide">
-    <div class="slider-container">
-      <div class="slider">
-        <div class="slides">
-          <div id="slides__1" class="slide">
-            <span class="slide__text">1. Create your reunion</span>
-            <a class="slide__prev" href="/app/assets/images/slide4.jpg" title="Next"></a>
-            <a class="slide__next" href="/app/assets/images/slide1.jpg" title="Next"></a>
-          </div>
-          <div id="slides__2" class="slide">
-            <span class="slide__text">2. When? Tell us when you are free</span>
-            <a class="slide__prev" href="/app/assets/images/slide2.jpg" title="Prev"></a>
-            <a class="slide__next" href="/app/assets/images/slid3.jpg" title="Next"></a>
-          </div>
-          <div id="slides__3" class="slide">
-            <span class="slide__text">Who? Tell us who is joining!</span>
-            <a class="slide__prev" href="/app/assets/images/slide5.jpg" title="Prev"></a>
-            <a class="slide__next" href="/app/assets/images/slide7.jpg" title="Next"></a>
-          </div>
-          <div id="slides__4" class="slide">
-            <span class="slide__text">3. Where? We will suggest you where to go!</span>
-            <a class="slide__prev" href="/app/assets/images/slide8.jpg" title="Prev"></a>
-            <a class="slide__next" href="/app/assets/images/slide9.jpg" title="Prev"></a>
-          </div>
-        </div>
+<p class="reunion-home"><strong> Plan your travel and meet up in the city of your choice</strong></p>
 
-        <div class="slider__nav">
-          <a class="slider__navlink" href=""></a>
-          <a class="slider__navlink" href="#slides__2"></a>
-          <a class="slider__navlink" href="#slides__3"></a>
-          <a class="slider__navlink" href="#slides__4"></a>
+  <div class="slider-container">
+  <div class="slider">
+    <div class="slides">
+      <div id="slides__1" class="slide slide-img1">
+        <span class="slide__text"></span>
+        <a class="slide__prev" href="#slides__4" title="Next"></a>
+        <a class="slide__next" href="#slides__2" title="Next"></a>
+      </div>
+      <div id="slides__2" class="slide slide-img2">
+        <span class="slide__text"></span>
+        <a class="slide__prev" href="#slides__1" title="Prev"></a>
+        <a class="slide__next" href="#slides__3" title="Next"></a>
+      </div>
+      <div id="slides__3" class="slide slide-img3">
+        <span class="slide__text"></span>
+        <a class="slide__prev" href="#slides__2" title="Prev"></a>
+        <a class="slide__next" href="#slides__4" title="Next"></a>
+      </div>
+      <div id="slides__4" class="slide slide-img4">
+        <span class="slide__text"></span>
+        <a class="slide__prev" href="#slides__3" title="Prev"></a>
+        <a class="slide__next" href="#slides__5" title="Prev"></a>
+      </div>
+      <div id="slides__5" class="slide slide-img5">
+        <span class="slide__text"></span>
+        <a class="slide__prev" href="#slides__4" title="Prev"></a>
+        <a class="slide__next" href="#slides__1" title="Prev"></a>
+      </div>
+    </div>
+    <div class="slider__nav">
+      <a class="slider__navlink" href="#slides__1"></a>
+      <a class="slider__navlink" href="#slides__2"></a>
+      <a class="slider__navlink" href="#slides__3"></a>
+      <a class="slider__navlink" href="#slides__4"></a>
+      <a class="slider__navlink" href="#slides__5"></a>
     </div>
   </div>
 </div>
 
-<a href="" target="_blank" class="read-article">
-  Discover more
-</a>
+<div class="cards">
+  <div class="card-category" >
+    <h2 class="card-h1"> 1. CREATE your reunion
+    </h2>
+    <p class="card-p">Include your information.
+    </p>
+  </div>
 
-  <br>
-  <br>
-  <br>
+  <div class="card-category">
+    <h2 class="card-h1">
+    2. WHEN? Share with us your availability!
+    </h2>
+    <p class="card-p">
+    Include your information.
+    </p>
+  </div>
 
-<div class="map map-expand-sm" >
-  <img src="map.png" alt="map">
+  <div class="card-category">
+   <h2 class="card-h1">3. WHO? Tell us who is joining!
+   </h2>
+   <p class="card-p">Include your friend's information. An email will be sent and they will receive invitation!
+   </p>
+  </div>
+</div>
+
+<div >
+<h3 class="reunion-home"><extra-stro>WHERE? </extra-stro> We will suggest you where to go! ✈
+</h3>
 </div>

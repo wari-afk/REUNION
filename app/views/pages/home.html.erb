@@ -1,6 +1,55 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-color: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
+  <h1 class="reunion-home">REUNION</h1>
+    <p class="button">
+    .text 
+      <%= link_to "Create a Reunion", new_reunion_path, class: "btn"%>
+    </p>
+</div>
 
-<%= link_to "Create a new reunion", new_reunion_path %>
+<p><strong> Plan your travel and meet up in the city of your choice</strong></p>
+  <div class="gallery-slide">
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slides">
+          <div id="slides__1" class="slide">
+            <span class="slide__text">1. Create your reunion</span>
+            <a class="slide__prev" href="/app/assets/images/slide4.jpg" title="Next"></a>
+            <a class="slide__next" href="/app/assets/images/slide1.jpg" title="Next"></a>
+          </div>
+          <div id="slides__2" class="slide">
+            <span class="slide__text">2. When? Tell us when you are free</span>
+            <a class="slide__prev" href="/app/assets/images/slide2.jpg" title="Prev"></a>
+            <a class="slide__next" href="/app/assets/images/slid3.jpg" title="Next"></a>
+          </div>
+          <div id="slides__3" class="slide">
+            <span class="slide__text">Who? Tell us who is joining!</span>
+            <a class="slide__prev" href="/app/assets/images/slide5.jpg" title="Prev"></a>
+            <a class="slide__next" href="/app/assets/images/slide7.jpg" title="Next"></a>
+          </div>
+          <div id="slides__4" class="slide">
+            <span class="slide__text">3. Where? We will suggest you where to go!</span>
+            <a class="slide__prev" href="/app/assets/images/slide8.jpg" title="Prev"></a>
+            <a class="slide__next" href="/app/assets/images/slide9.jpg" title="Prev"></a>
+          </div>
+        </div>
 
+        <div class="slider__nav">
+          <a class="slider__navlink" href=""></a>
+          <a class="slider__navlink" href="#slides__2"></a>
+          <a class="slider__navlink" href="#slides__3"></a>
+          <a class="slider__navlink" href="#slides__4"></a>
+    </div>
+  </div>
+</div>
 
+<a href="" target="_blank" class="read-article">
+  Discover more
+</a>
+
+  <br>
+  <br>
+  <br>
+
+<div class="map map-expand-sm" >
+  <img src="map.png" alt="map">
+</div>

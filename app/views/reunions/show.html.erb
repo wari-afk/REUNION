@@ -1,28 +1,46 @@
-
-<div class="reunion-show-banner mb-4">
-  <div class="container m-4">
-    <h1><strong><%= @reunion.name %></strong></h1>
-    <h2><%= @reunion.description %></h2>
-  </div>
-</div>
-<div class="container mb-3">
-  <div class="d-flex justify-content-between">
-    <div class="reunion_container_card">
-      <h2>Offered dates</h2>
-        <div class="reunion_show_card">
-          <%= link_to "1- Add date option", "#"%>
-        </div>
-    </div>
-    <div class="reunion_container_card">
-      <h2>Participants</h2>
-        <div class="reunion_show_card">
-          <%= link_to "2- Add participants", "#" %>
-        </div>
+<div style="background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,254,255,1) 100%)">
+  <div class="container">
+    <div class="reunion-show-banner mb-4">
+      <div class="container m-4">
+        <h1><strong><%= @reunion.name %></strong></h1>
+        <br>
+        <h2><%= @reunion.description %></h2>
+      </div>
     </div>
   </div>
-</div>
-<div class="container d-flex justify-content-center mb-4">
-  <div class="btn btn-success">
-    Notify your friends!
+  <div class="container mb-3">
+    <div class="d-flex justify-content-center">
+      <div class="reunion_container_card m-3" style="color:black">
+        <h2>Offered dates</h2>
+          <div class="reunion_show_card">
+            <%= link_to "1- Add date option", "#"%>
+          </div>
+          <div class="reunion_container_card mt-2" style="color:black">
+          date option 1
+          <br>
+          date option 2
+          </div>
+      </div>
+      <div class="reunion_container_card m-3" style="color:black">
+        <h2>Participants</h2>
+          <div class="reunion_show_card">
+            <%= link_to "2- Add participants", "#"  %>
+          </div>
+          <div class="reunion_container_card mt-2" style="color:black">
+          participant 1
+          <br>
+          participant 2
+          <br>
+          participant 3
+          </div>
+      </div>
+    </div>
   </div>
+  <% if @date_options.size >= 1 && @participations.size >= 1 %>
+  <div class="container d-flex justify-content-center mb-4">
+    <div class="btn btn-success">
+      Notify your friends!
+    </div>
+  </div>
+  <% end %>
 </div>

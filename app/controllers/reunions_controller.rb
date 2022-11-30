@@ -7,6 +7,12 @@ class ReunionsController < ApplicationController
   def create
     @reunion = Reunion.new(reunion_params)
     @reunion.user = current_user
+    if @reunion.save
+      # can't figure out how to go to the create participation
+      redirect_to new_reunion_participation_path(@reunion)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private

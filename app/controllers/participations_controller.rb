@@ -5,20 +5,14 @@ class ParticipationsController < ApplicationController
   end
 
   def create
-    # you know the reunion_id bc its a nested route
-    # organizer adds a user to a reunion
-    # find user_id from params in form
-    # add user_id to participation
-    @participation = Participation.new(participation_params)
-    @reunion = Reunion.find(params[:reunion_id])
-    @participation.reunion = @reunion
-    # @participation.user = current_user
-    # @participation.user = User.find(params[:user_id])
-    if @participation.save
-      redirect_to reunion_path(@reunion), notice: "You added a new participant successfully"
-    else
-      render :new, status: :unprocessable_entity
+    @reunion = Reunion.find(params[:reunion_id]) # => Comes from nested URL
+    # Pick up user ids from form
+    desired_participants_id = params[:participation][:user_id] # => ["2", "3", "4"]
+    # Iterate over the user ids to instantiate the participations
+    desired_participants_id.each do |participant_id|
+      Participation.create(user_id: participant_id, reunion: @reunion)
     end
+    # redirect_to reunion_path(@reunion)
   end
 
   private

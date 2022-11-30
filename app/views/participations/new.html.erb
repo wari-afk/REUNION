@@ -1,0 +1,9 @@
+<h1>create participations</h1>
+
+<%= simple_form_for @reunion do |f|%>
+  <%= f.input :user_id, placeholder: "Give your friends id" %>
+  <%= f.input :reunion_id, placeholder: "Give your friends id" %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Go back", :back %>

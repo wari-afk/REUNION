@@ -12,7 +12,8 @@ class ParticipationsController < ApplicationController
     @participation = Participation.new(participation_params)
     @reunion = Reunion.find(params[:reunion_id])
     @participation.reunion = @reunion
-    @participation.user = current_user
+    # @participation.user = current_user
+    # @participation.user = User.find(params[:user_id])
     if @participation.save
       redirect_to reunion_path(@reunion), notice: "You added a new participant successfully"
     else

@@ -16,9 +16,11 @@
             <%= link_to "1- Add date option", new_reunion_date_option_path(@reunion)%>
           </div>
           <div class="reunion_container_card mt-2" style="color:black">
-          date option 1
-          <br>
-          date option 2
+            <% @reunion.date_option.each do|date|%>
+            <div>
+              <%= date.start_date.strftime("%b. %d. %Y") %> - <%= date.end_date.strftime("%b. %d. %Y") %>
+            </div>
+            <%end %>
           </div>
       </div>
       <div class="reunion_container_card m-3" style="color:black">

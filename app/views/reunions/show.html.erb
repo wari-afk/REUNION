@@ -29,11 +29,11 @@
             <%= link_to "2- Add participants", new_reunion_participation_path(@reunion) %>
           </div>
           <div class="reunion_container_card mt-2" style="color:black">
-          participant 1
-          <br>
-          participant 2
-          <br>
-          participant 3
+            <ul>
+              <% @reunion.participations.each do |participation| %>
+                <li><%= participation.user.name %></li>
+              <% end %>
+            </ul>
           </div>
       </div>
     </div>

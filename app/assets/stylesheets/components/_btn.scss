@@ -11,3 +11,27 @@
 .btn-create:hover {
   opacity: 1;
 }
+
+.btn-add {
+  color: $bluereunion;
+}
+
+.btn-back {
+  color: $grayreunion;
+  // border: 1px solid $grayreunion;
+  padding: 4px 12px;
+  border-radius: 50px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-back:hover {
+  color: $grayreunion;
+  border: 1px solid $grayreunion;
+  padding: 4px 12px;
+  border-radius: 50px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+}

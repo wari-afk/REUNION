@@ -13,7 +13,7 @@
       <div class="reunion_container_card m-3" style="color:black">
         <h2>Offered dates</h2>
           <div class="reunion_show_card">
-            <%= link_to "1- Add date option", "#"%>
+            <%= link_to "1- Add date option", new_reunion_date_option_path(@reunion)%>
           </div>
           <div class="reunion_container_card mt-2" style="color:black">
           date option 1
@@ -24,7 +24,7 @@
       <div class="reunion_container_card m-3" style="color:black">
         <h2>Participants</h2>
           <div class="reunion_show_card">
-            <%= link_to "2- Add participants", "#"  %>
+            <%= link_to "2- Add participants", new_reunion_participation_path(@reunion) %>
           </div>
           <div class="reunion_container_card mt-2" style="color:black">
           participant 1

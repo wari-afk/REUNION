@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :reunions, only: [:new, :create, :show] do
     resources :participations, only: [:create, :new]
+    resources :date_options, only: [:create, :new]
   end
 end

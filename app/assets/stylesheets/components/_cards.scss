@@ -1,34 +1,39 @@
 .cards {
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .card-category {
-  background-color: #a0e2cd;
-  height: 200px;
-  display: flex;
+  background-color: $bluereunion;
+  display: flexbox;
   justify-content: center;
   align-items: center;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  font-family: Poppins;
+  // text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  // box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
   margin-right: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
-  background-size: 100% 100%;
+  // background-size: 100% 100%;
+  padding: 24px;
+  width: 400px;
+  height: 180px;
+  border: 1px solid #030050;
+  text-align: center;
 }
 
 .card-h1 {
-  font-size: 30px;
-  color: white;
-  font-weight: 20;
+  color: $greenlogo;
+  font-size: 24px;
 }
 
 .card-p {
   font-size: 20px;
-  color: grey;
-  font-weight: 10;
+  color: $grayreunion;
+  font-size: 20px;
+  // font-weight: 500;
 }
 
 .card-new-participant {

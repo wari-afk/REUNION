@@ -1,20 +1,18 @@
 .footer {
-  background: #6c757d;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   justify-content: center;
   height: 100px;
   padding: 0px 50px;
-  color: rgba(0, 0, 0, 0.3);
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: #ced4da;
-  opacity: 0.4;
+  color: $bluereunion;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;

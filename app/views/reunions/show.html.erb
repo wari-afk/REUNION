@@ -35,9 +35,11 @@
 </div>
 <br>
 <br>
+  <% if @reunion.date_option.size >= 1 && @reunion.participations.size >= 1 %>
   <div class="container d-flex justify-content-center mb-4">
     <div class="btn-notify">
       Notify your friends!
     </div>
   </div>
+  <% end %>
 </div>

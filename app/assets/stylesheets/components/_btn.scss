@@ -1,15 +1,18 @@
 .btn-create {
-  color: #4a4a4a;
-  border: 1px solid #4a4a4a;
+  color: $grayreunion;
+  border: 1px solid #a89999;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: bold;
   opacity: 0.6;
   transition: opacity 0.3s ease;
+  text-decoration: none;
 }
 
 .btn-create:hover {
   opacity: 1;
+  text-decoration: none;
+  color: $grayreunion;
 }
 
 .btn-add {
@@ -33,5 +36,33 @@
   border-radius: 50px;
   opacity: 0.3;
   transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-create-show {
+  color: $grayreunion;
+  border: 1px solid #a89999;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  // opacity: 0.6;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  align-items: center;
+}
+
+.btn-create-show:hover {
+  opacity: 0.6;
+  text-decoration: none;
+  color: $grayreunion;
+  align-items: center;
+}
+
+.btn-notify {
+  color: $bluereunion;
+  background-color: $greenlogo;
+  border: 1px solid #030050;
+  padding: 8px 24px;
+  border-radius: 50px;
   text-decoration: none;
 }

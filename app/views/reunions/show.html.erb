@@ -16,7 +16,7 @@
     <br>
     <br>
     <ul>
-      <% @reunion.date_option.each do|date|%>
+      <% @reunion.date_options.each do|date|%>
         <li><%= date.start_date.strftime("%b. %d. %Y") %> - <%= date.end_date.strftime("%b. %d. %Y") %></li>
       <%end %>
     </ul>
@@ -35,10 +35,10 @@
 </div>
 <br>
 <br>
-  <% if @reunion.date_option.size >= 1 && @reunion.participations.size >= 1 %>
+  <% if @reunion.date_options.size >= 1 && @reunion.participations.size >= 1 %>
   <div class="container d-flex justify-content-center mb-4">
     <div class="btn-notify">
-      <%= link_to "Invite ready. Notify your friends!", reunion_path(@reunion) %>
+      <%= link_to "Invite ready. Notify your friends!", upvote_date_option_path(@reunion) %>
     </div>
   </div>
   <% end %>

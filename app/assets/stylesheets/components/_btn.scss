@@ -70,5 +70,14 @@
   padding: 8px 24px;
   border-radius: 50px;
   text-decoration: none;
-  color: #a0e2cd;
+}
+
+.btn-notify:hover {
+  color: $bluereunion;
+  background-color: $greenlogo;
+  border: 1px solid #030050;
+  padding: 8px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  opacity: 50%;
 }

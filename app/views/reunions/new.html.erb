@@ -1,16 +1,18 @@
+<div style="padding: 30px;">
+  <h1 style="text-align:center;">Create your reunion</h1>
+</div>
 <div class="container py-5">
   <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
-        <h1 style="text-align:center;">New reunion</h1>
-        <h6 style="font-weight:normal; text-align:center;">Name your reunion and add description to your reunion</h6>
+        <h6 style="font-weight:500; text-align:center;">Name your reunion and add description to your reunion</h6>
         <%= simple_form_for @reunion do |f|%>
           <%= f.input :name, placeholder: "Give your reunion a name" %>
           <%= f.input :description, placeholder: "Tell us what you plan is" %>
           <div style="display:flex;position:relative;display:inline;">
             <%= link_to "Go back", :back %>
             <div style="float:right">
-              <%= f.submit :create %>
+              <%= f.submit :create, class: "btn btn-primary" %>
             </div>
           </div>
         <% end %>

@@ -38,7 +38,7 @@
   <% if @reunion.date_options.size >= 1 && @reunion.participations.size >= 1 %>
   <div class="container d-flex justify-content-center mb-4">
     <div class="btn-notify">
-      <%= link_to "Invite ready. Notify your friends!", upvote_date_option_path(@reunion) %>
+      <%= link_to "Invite ready. Notify your friends!", reunion_date_options_path(@reunion) %>
     </div>
   </div>
   <% end %>

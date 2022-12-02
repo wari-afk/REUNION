@@ -15,6 +15,7 @@ class DateOptionsController < ApplicationController
     end
   end
 
+  
   private
 
   def date_option_params

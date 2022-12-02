@@ -12,7 +12,7 @@ class ParticipationsController < ApplicationController
     desired_participants_id.each do |participant_id|
       Participation.create(user_id: participant_id, reunion: @reunion)
     end
-    # redirect_to reunion_path(@reunion)
+    redirect_to reunion_path(@reunion), notice: "You added a participants"
   end
 
   private

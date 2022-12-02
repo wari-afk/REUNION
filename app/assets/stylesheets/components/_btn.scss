@@ -6,8 +6,16 @@
   font-weight: bold;
   opacity: 0.6;
   transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-create-container {
+  justify-content: center;
+  display: flex;
 }
 
 .btn-create:hover {
   opacity: 1;
+  text-decoration: none;
+  color: #a0e2cd;
 }

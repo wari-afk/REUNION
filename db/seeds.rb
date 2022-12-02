@@ -10,7 +10,7 @@
 require "open-uri"
 User.destroy_all
 
-User.create(email: "maria@mail.com", password: "123456", city_of_origin: "Geneva")
-User.create(email: "pierre@mail.com", password: "123456", city_of_origin: "Amsterdam")
 User.create(email: "ajush@mail.com", password: "123456", city_of_origin: "Munich")
 User.create(email: "joanna@mail.com", password: "123456", city_of_origin: "Madrid")
+User.create(email: "maria@mail.com", password: "123456", city_of_origin: "Geneva")
+User.create(email: "pierre@mail.com", password: "123456", city_of_origin: "Amsterdam")

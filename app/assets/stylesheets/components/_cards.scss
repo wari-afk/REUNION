@@ -37,3 +37,45 @@
   color: grey;
   font-weight: 10;
 }
+
+.card-new-participant {
+  // padding: 12px;
+  // box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  color: $bluereunion;
+  background-position: center;
+  margin-right: 200px;
+  margin-left: 200px;
+  max-height: 100%;
+}
+
+.card-new-participant h3 {
+  color: $greenlogo;
+}
+
+.associationStyling {
+  color: $grayreunion;
+}
+
+.card-reunion-show {
+  padding: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  // align-items: center;
+  color: $bluereunion;
+  background-position: center;
+  width: 400px;
+  // align-items: center;
+  // justify-content: center;
+  // margin-right: 200px;
+  // margin-left: 200px;
+  // max-height: 100%;
+}
+
+.cards-show-reunion {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul {
+  list-style-type: none;
+}

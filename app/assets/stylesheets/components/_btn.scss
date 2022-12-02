@@ -9,6 +9,11 @@
   text-decoration: none;
 }
 
+.btn-create-container {
+  justify-content: center;
+  display: flex;
+}
+
 .btn-create:hover {
   opacity: 1;
   text-decoration: none;
@@ -65,4 +70,5 @@
   padding: 8px 24px;
   border-radius: 50px;
   text-decoration: none;
+  color: #a0e2cd;
 }

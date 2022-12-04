@@ -52,6 +52,9 @@ gem "devise"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
+gem "amadeus"
+gem "json"
+gem "httparty"
 
 # Ability to vote for different models
 gem 'acts_as_votable'

@@ -1,0 +1,53 @@
+<% source=''%>
+<% @reunion.user = current_user %>
+<% get_airport_url = "https://api.skypicker.com/locations?term=#{@reunion.user.city_of_origin}" %>
+<% airport_response = HTTParty.get(get_airport_url)%>
+<% source += 'origins[]='%>
+<% source += airport_response["locations"][0]['name']%>
+<% source += '('%>
+<% source += airport_response["locations"][0]['code']%>
+<% source += ')'%>
+<% source += airport_response["locations"][0]['country']['name']%>
+
+<% @reunion.participations.each do |participation| %>
+
+  <% get_airport_url = "https://api.skypicker.com/locations?term=#{participation.user.city_of_origin}" %>
+  <% airport_response = HTTParty.get(get_airport_url)%>
+  <% source += '&origins[]='%>
+  <% source += airport_response["locations"][0]['name']%>
+  <% source += '('%>
+  <% source += airport_response["locations"][0]['code']%>
+  <% source += ')'%>
+  <% source += airport_response["locations"][0]['country']['name']%>
+<% end %>
+
+<%trip_url = "https://api.tripmatch.org/matches?#{source}&arrivalDate=2022-12-23&flightDurations=15,15,15,15,15&arrivalDifference=10&currency=&sortBy=price&flightDepartures[]=0-24&flightDepartures[]=0-24&flightDepartures[]=0-24&flightDepartures[]=0-24&flightDepartures[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&destination=Europe"%>
+
+<%trip_response = HTTParty.get(trip_url)%>
+<%trip_response.each do |trip|%>
+<div class="card-trip">
+  <%destinations = trip['destination']%>
+  <%dest_image="https://d13k13wj6adfdf.cloudfront.net/urban_areas/#{destinations['name'].downcase}_web.jpg"%>
+  <img src="<%=dest_image%>">
+  <div class="card-trip-infos">
+    <!--<%=destinations['code']%>-->
+    <div style ="font-size:20px;">
+      <%=destinations['name']%><%= ', ' %>
+      <%=destinations['country']%>
+    </div><br>
+    <%trip['trips'].each do |trip|%>
+    <div class="suggested-destination-card-category" >
+      <%=trip['origin']['city']['name']%> <%= ' => '%>
+      <%=trip['destination']['city']['name']%><br>
+      <%= ' Price: '%>
+      <%=trip['bestPrice']%><%=' £ '%><br>
+      <%= "Arrival:" %><%=trip['departureTime']%><br>
+      <%= "Departure:" %><%=trip['arrivalTime']%><br>
+      <%= '   Duration: '%><%=trip['duration'].to_i %><br>
+      </div>&nbsp;&nbsp;&nbsp;
+    <% end %>
+  </div>
+  <h2 class="card-trip-pricing">Total: £<%=trip['totalPrice']%></h2>
+</div>
+<br>
+<%end%>

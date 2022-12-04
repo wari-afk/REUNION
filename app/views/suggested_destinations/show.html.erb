@@ -3,44 +3,42 @@
 </div>
 
 <div>
-<article class="participants">
+  <article class="participants">
     <h1 class="participants_title"><span class="participants-bottom">REUNION CREW</span></h1>
-  </header>
-  <main class="participants_profiles">
-    <article class="participants_profile">
-      <%= image_tag "pierre.jpg", class: "participants_picture" %>
-      <span class="participants_name">Pierre</span>
-      <span class="participants_value">Organizer<span></span></span>
-    </article>
-    <article class="participants_profile">
-      <%= image_tag "ajush.jpg", class: "participants_picture" %>
-      <span class="participants_name">Ajush</span>
-      <span class="participants_value">Friend<span></span></span>
-    </article>
-    <article class="participants_profile">
-      <%= image_tag "maria.jpg", class: "participants_picture" %>
-      <span class="participants_name">Maria</span>
-      <span class="participants_value">Friend<span></span></span>
-    </article>
-    <article class="participants_profile">
-      <%= image_tag "joana.jpg", class: "participants_picture" %>
-      <span class="participants_name">Joana</span>
-      <span class="participants_value">Friend<span></span></span>
-    </article>
-  </div>
+      </header>
+        <main class="participants_profiles">
+          <article class="participants_profile">
+            <%= image_tag "pierre.jpg", class: "participants_picture" %>
+            <span class="participants_name">Pierre</span>
+            <span class="participants_value">Organizer<span></span></span>
+          </article>
+          <article class="participants_profile">
+            <%= image_tag "ajush.jpg", class: "participants_picture" %>
+            <span class="participants_name">Ajush</span>
+            <span class="participants_value">Friend<span></span></span>
+          </article>
+          <article class="participants_profile">
+            <%= image_tag "maria.jpg", class: "participants_picture" %>
+            <span class="participants_name">Maria</span>
+            <span class="participants_value">Friend<span></span></span>
+          </article>
+          <article class="participants_profile">
+            <%= image_tag "joana.jpg", class: "participants_picture" %>
+            <span class="participants_name">Joana</span>
+            <span class="participants_value">Friend<span></span></span>
+          </article>
+  </article>
+</div>
 
 
-
-
-
-<div class="title-destination">
-<h3>Destinations</h3>
+<div>
+  <h3>Destinations</h3>
 </div>
 
 <div class="destination-info">
    <% @suggested_destinations.each do |link| %>
-    <%= image_tag link, class:"photo-destination" %>
-    <% end %>
+      <%= image_tag link, class:"photo-destination" %>
+      <% end %>
     <%# <% public_id = "/reunion/'#{destination_city}'" %>
      <%# <%= destination_city %>
 </div>

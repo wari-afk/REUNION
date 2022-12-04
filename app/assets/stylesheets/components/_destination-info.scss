@@ -1,42 +1,29 @@
 .destination-info {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-  text-align: center;
+  // display: flex;
+  // justify-content: space-evenly;
+  // margin-bottom: 30px;
+  // flex-wrap: wrap;
+  // text-align: center;
 }
 .destination-option {
-  border: 1px solid rgb(230, 230, 230);
-  width: 600px;
-  height: 500px;
-  border-radius: 5%;
-}
-.destination-option1 {
-  background-image: url("slide9.jpg");
-  border-radius: 5%;
-  width: 300px;
-  height: 300px;
-  background-size: 100% 100%;
-}
-
-.destination-option2 {
-  background-image: url("slide6.jpg");
-  border-radius: 5%;
-  width: 300px;
-  height: 300px;
-  background-size: 100% 100%;
+  // border-radius: 60%;
+  // width: 100px;
+  // height: 100px;
+  // object-fit: cover;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  // gap: 2rem;
+  // position: relative;
+  // display: block;
+  // height: 100%;
+  // border-radius: calc(var(--curve) * 1px);
+  // overflow: hidden;
+  // text-decoration: none;
+  // width: 100%;
+  // height: auto;
 }
 
-.destination-option3 {
-  background-image: url("slide8.jpg");
-  border-radius: 5%;
-  width: 300px;
-  height: 300px;
-  background-size: 100% 100%;
-}
-
-.destination {
-  border-color: gray;
-  border-radius: 10%;
-  box-shadow: 10%;
+.photo-destination {
+  width: 100px;
+  height: 100px;
 }

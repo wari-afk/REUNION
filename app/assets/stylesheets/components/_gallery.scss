@@ -71,6 +71,7 @@ a.slide__next,
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   right: 5%;
+  opacity: 0.3;
 }
 
 .slider::before,
@@ -81,10 +82,11 @@ a.slide__next,
   top: 48%;
   width: 35px;
   height: 35px;
-  border: solid black;
+  border: solid white;
   border-width: 0 4px 4px 0;
   padding: 3px;
   box-sizing: border-box;
+  opacity: 0.6;
 }
 
 .slider::before,
@@ -110,8 +112,9 @@ a.slide__next,
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  background-color: black;
+  background-color: white;
   margin: 0 10px 0 10px;
+  opacity: 0.5;
 }
 
 .slide-img1 {

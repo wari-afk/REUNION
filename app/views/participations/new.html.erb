@@ -8,11 +8,9 @@
                         label: false,
                         include_blank: false,
                         include_hidden: false %>
-      <%= f.submit "Add friends", class: "btn-add" %>
+      <%= link_to "Go back", :back, { :class => "btn-back" } %>
+      <%= f.submit "Add", class: "btn-notify" %>
     <% end %>
-
-
-
 </div>
-<br>
-<%= link_to "Go back", :back, { :class => "btn-back" } %>
+
+

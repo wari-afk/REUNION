@@ -1,0 +1,42 @@
+<% @trips.take(3).each do |trip| %>
+  <div class="card-trip">
+    <% destination = trip['destination'] %>
+    <%= image_tag "https://source.unsplash.com/random/1000×500/?#{destination['name']}" %>
+
+    <div class="card-trip-infos">
+      <%# =destinations['code']%>
+
+      <div style="font-size:20px;">
+        <%=destination['name']%><%= ', ' %>
+        <%=destination['country']%>
+      </div>
+
+      <% trip['trips'].each do |trip| %>
+        <div class="suggested-destination-card-category" >
+          <p>
+            <%= trip['origin']['city']['name'] %> => <%= trip['destination']['city']['name'] %>
+          </p>
+          <p>
+            Price: <%= trip['bestPrice']%>£
+          </p>
+          <p>
+            Arrival: <%= format_date_with_time(trip['departureTime']) %>
+          </p>
+          <p>
+            Departure: <%= format_date_with_time(trip['arrivalTime']) %>
+          </p>
+          <p>
+            <% totaltime = (trip['duration'].to_i)
+            hours = (totaltime / 60)
+            minutes = (totaltime % 60) %>
+            Duration: <%= "#{hours}h #{minutes}min" %>
+          </p>
+        </div>
+      <% end %>
+
+    </div>
+
+    <h2 class="card-trip-pricing">Total: £<%=trip['totalPrice']%></h2>
+  </div>
+
+<%end%>

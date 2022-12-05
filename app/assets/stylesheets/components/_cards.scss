@@ -18,10 +18,11 @@
   margin-bottom: 20px;
   // background-size: 100% 100%;
   padding: 24px;
-  width: 400px;
+  // width: 400px;
   height: 180px;
   border: 1px solid #030050;
   text-align: center;
+  width: 50%;
 }
 
 .card-h1 {
@@ -76,4 +77,29 @@
 
 ul {
   list-style-type: none;
+}
+
+.table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  // min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin: auto;
+  width: 50%;
+}
+
+.table thead tr {
+  background-color: $greenlogo;
+  color: $bluereunion;
+  text-align: left;
+  border: thin solid $bluereunion;
+}
+
+.table tbody tr {
+  color: $bluereunion;
+}
+
+.table tbody tr {
+  border: thin solid $bluereunion;
+  text-align: left;
 }

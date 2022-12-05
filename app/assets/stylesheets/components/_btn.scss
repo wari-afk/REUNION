@@ -27,21 +27,56 @@
 .btn-back {
   color: $grayreunion;
   border: 1px solid $grayreunion;
-  padding: 4px 12px;
+  padding: 8px 24px;
   border-radius: 50px;
-  opacity: 0.3;
-  transition: opacity 0.3s ease;
+  // opacity: 0.3;
+  // transition: opacity 0.3s ease;
   text-decoration: none;
 }
 
 .btn-back:hover {
   color: $grayreunion;
   border: 1px solid $grayreunion;
-  padding: 4px 12px;
+  padding: 8px 24px;
   border-radius: 50px;
-  opacity: 0.3;
-  transition: opacity 0.3s ease;
   text-decoration: none;
+  opacity: 50%;
+}
+
+
+
+
+
+.btn-notify {
+  color: $bluereunion;
+  background-color: $greenlogo;
+  border: 1px solid #030050;
+  padding: 8px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.btn-notify-primary {
+  color: $bluereunion;
+  background-color: $greenlogo;
+  border: 1px solid #030050;
+  padding: 24px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.btn-notify:hover {
+  color: $bluereunion;
+  background-color: $greenlogo;
+  border: 1px solid #030050;
+  padding: 8px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  transform:scale(1.1,1.1);
+  -webkit-transform:scale(1.1,1.1);
+  -moz-transform:scale(1.1,1.1);
+  transition-delay: 0.1s;
+  // opacity: 0.1;
 }
 
 .btn-create-show {
@@ -61,23 +96,4 @@
   text-decoration: none;
   color: $grayreunion;
   align-items: center;
-}
-
-.btn-notify {
-  color: $bluereunion;
-  background-color: $greenlogo;
-  border: 1px solid #030050;
-  padding: 8px 24px;
-  border-radius: 50px;
-  text-decoration: none;
-}
-
-.btn-notify:hover {
-  color: $bluereunion;
-  background-color: $greenlogo;
-  border: 1px solid #030050;
-  padding: 8px 24px;
-  border-radius: 50px;
-  text-decoration: none;
-  opacity: 50%;
 }

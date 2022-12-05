@@ -7,9 +7,9 @@
                         input_html: { multiple: true, class: "associationStyling" },
                         include_blank: false,
                         include_hidden: false %>
-      <%= f.submit "Add", class: "btn-add" %>
+      <%= link_to "Go back", :back, { :class => "btn-back" } %>
+      <%= f.submit "Add", class: "btn-notify" %>
     <% end %>
 </div>
 <br>
-<%= link_to "Go back", :back, { :class => "btn-back" } %>
 </html>

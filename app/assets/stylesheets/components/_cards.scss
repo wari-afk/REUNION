@@ -1,7 +1,10 @@
 .cards {
-  display: flex;
   justify-content: space-evenly;
   align-items: center;
+  display: flex;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-bottom: 50px;
 }
 
 .card-category {

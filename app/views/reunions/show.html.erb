@@ -12,7 +12,7 @@
 <div class="cards-show-reunion">
   <div class="card-reunion-show text-center">
     <h3 class="h3-show-reunion-info">Offered dates</h3>
-    <%= link_to "Add date option", new_reunion_date_option_path(@reunion), class: "btn-create-show" %>
+    <%= link_to "Add date option", new_reunion_date_option_path(@reunion), class: "btn-notify" %>
     <br>
     <br>
     <ul>
@@ -23,7 +23,7 @@
   </div>
   <div class="card-reunion-show text-center">
     <h3 class="h3-show-reunion-info">Participants</h3>
-    <%= link_to "Add participants", new_reunion_participation_path(@reunion), class: "btn-create-show" %>
+    <%= link_to "Add participants", new_reunion_participation_path(@reunion), class: "btn-notify" %>
     <br>
     <br>
     <ul>
@@ -37,9 +37,7 @@
 <br>
   <% if @reunion.date_options.size >= 1 && @reunion.participations.size >= 1 %>
   <div class="container d-flex justify-content-center mb-4">
-    <div class="btn-notify">
-      <%= link_to "Invite ready. Notify your friends!", reunion_date_options_path(@reunion) %>
-    </div>
+      <%= link_to "Invite ready. Notify your friends!", reunion_date_options_path(@reunion), class: "btn-notify" %>
   </div>
   <% end %>
 </div>

@@ -28,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_29_145823) do
     t.bigint "reunion_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "has_voted_dates"
     t.index ["reunion_id"], name: "index_participations_on_reunion_id"
     t.index ["user_id"], name: "index_participations_on_user_id"
   end

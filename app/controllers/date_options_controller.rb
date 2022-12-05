@@ -21,9 +21,18 @@ class DateOptionsController < ApplicationController
   end
 
   def upvote
-    @date_option = DateOption.find(params[:date_option_id])
-    @participation = Participation.find_by(user: current_user, reunion: @date_option.reunion)
-    @date_option.liked_by @participation
+    # params[:date_option_ids] => ["8", "9"]
+    @date_option_ids = []
+    @date_option_ids.each do |date_option_id|
+      @date_option = DateOption.find(params[date_option_id])
+      @participation = Participation.find_by(user: current_user, reunion: @date_option.reunion)
+      date_option.liked_by @participation
+    end
+    raise
+  end
+
+  def count_vote
+    @date_option.votes_for.size
   end
 
   # TODO about deciding the most popular option

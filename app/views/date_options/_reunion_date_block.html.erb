@@ -1,0 +1,36 @@
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-create-show" data-bs-toggle="modal" data-bs-target="#dateModal">
+    Add Date Option
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade"  data-controller="data-options" id="dateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="dateModalLabel">Which dates?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+
+  <!-- Form for dates -->
+<div class="modal-body" data-date-option-target="input" >
+
+          <%= simple_form_for [reunion, date_option], data: { controller: 'flatpickr', date_options_target: "form", action: "submit->date-options#submitDateOption" } do |f| %>
+            <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDate" } } %>
+            <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDate" } } %>
+            <%= f.submit 'Add date option', class: "btn btn-primary", data: { bs_dismiss: "modal" } %>
+          <% end %>
+
+</div>
+
+<!-- Display dates -->
+  <ul>
+    <% reunion.date_options.each do|date|%>
+      <li><%= date.start_date.strftime("%b. %d. %Y") %> - <%= date.end_date.strftime("%b. %d. %Y") %></li>
+    <% end %>
+  </ul>
+</div>
+</div>
+</div>

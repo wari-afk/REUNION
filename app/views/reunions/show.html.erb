@@ -7,27 +7,16 @@
     <h2 class="h2-show-reunion"><%= @reunion.description %></h2>
   </div>
 </div>
-<div class="cards-show-reunion">
-  <div class="card-reunion-show text-center">
-    <h3 class="h3-show-reunion-info">Offered dates</h3>
-    <%= render "date_options/reunion_block" %>
 
-    <ul>
-      <% @reunion.date_options.each do|date|%>
-        <li><%= date.start_date.strftime("%b. %d. %Y") %> - <%= date.end_date.strftime("%b. %d. %Y") %></li>
-      <%end %>
-    </ul>
-  </div>
-  <div class="card-reunion-show text-center">
-    <h3 class="h3-show-reunion-info">Participants</h3>
-    <%= link_to "Add participants", new_reunion_participation_path(@reunion), class: "btn-create-show" %>
-    
-    <ul>
-      <% @reunion.participations.each do |participation| %>
-        <li><%= participation.user.name %></li>
-      <%end %>
-    </ul>
-  </div>
+
+<div class="card-reunion-show text-center" data-controller="date-options">
+  <h3 class="h3-show-reunion-info">Offered dates</h3>
+  <%= render "date_options/reunion_date_block", reunion: @reunion, date_option: @date_option %>
+</div>
+
+<div class="card-reunion-show text-center" data-controller="participations">
+  <h3 class="h3-show-reunion-info">Participants</h3>
+    <%= render "participations/reunion_participants_block", reunion: @reunion, participant: @participant %>
 </div>
 
 <% if @reunion.date_options.size >= 1 && @reunion.participations.size >= 1 %>

@@ -4,6 +4,12 @@
 
 import { application } from "./application";
 
+import DateOptionsController from "./date_options_controller";
+application.register("date-options", DateOptionsController);
+
+import ParticipationsController from "./participations_controller";
+application.register("participations", ParticipationsController);
+
 import FlatpickrController from "./flatpickr_controller";
 application.register("flatpickr", FlatpickrController);
 

@@ -4,7 +4,10 @@ class DateOptionsController < ApplicationController
     @reunion = Reunion.find(params[:reunion_id])
     @date_option.reunion = @reunion
     if @date_option.save
-      redirect_to reunion_path(@reunion), notice: "You added date option"
+      respond_to do |format|
+        format.html { redirect_to reunion_path(@reunion), notice: "You added date option" } # classic Rails Flow
+        format.text { render partial: "date_options/reunion_date_block", locals: { reunion: @reunion, date_option: DateOption.new }, formats: [:html] }
+      end
     else
       render :new, status: :unprocessable_entity
     end

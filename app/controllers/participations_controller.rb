@@ -11,8 +11,11 @@ class ParticipationsController < ApplicationController
     # Iterate over the user ids to instantiate the participations
     desired_participants_id.each do |participant_id|
       Participation.create(user_id: participant_id, reunion: @reunion)
-    end
-    redirect_to reunion_path(@reunion), notice: "You added a participants"
+      end
+    respond_to do |format|
+      format.html { redirect_to reunion_path(@reunion), notice: "You added a participants" } # classic Rails Flow
+      format.text { render partial: "participations/reunion_participants_block", locals: { reunion: @reunion, participation: Participation.new }, formats: [:html] }
+      end
   end
 
   private

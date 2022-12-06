@@ -38,12 +38,6 @@ class DateOptionsController < ApplicationController
     @date_option.votes_for.size
   end
 
-  # TODO about deciding the most popular option
-  # def decide_date_option
-  #   @participation.likes @date_option
-  #   @date_option.votes_for.size
-  # end
-
   private
 
   def date_option_params

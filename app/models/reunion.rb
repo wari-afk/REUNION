@@ -1,5 +1,5 @@
 class Reunion < ApplicationRecord
   belongs_to :user
   has_many :date_options, dependent: :destroy
-  has_many :participations
+  has_many :participations, dependent: :destroy
 end

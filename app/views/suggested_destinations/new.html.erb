@@ -1,42 +1,90 @@
-<% @trips.take(3).each do |trip| %>
-  <div class="card-trip">
-    <% destination = trip['destination'] %>
-    <%= image_tag "https://source.unsplash.com/random/1000×500/?#{destination['name']}" %>
+<%#
+  trip is an array of 3 destinations
+  we want to display index 0
+  we want to hide index 1, 2 but keep them at hand if user click on Suggest Another
+%>
 
-    <div class="card-trip-infos">
-      <%# =destinations['code']%>
+<div class="reunion-show-banner-suggested">
+  <div class="container" >
+    <h1 class="h1-show-reunion"><%= @reunion.name %></h1>
+    <p><%= @reunion.description %></p>
+  </div>
+</div>
 
-      <div style="font-size:20px;">
-        <%=destination['name']%><%= ', ' %>
-        <%=destination['country']%>
-      </div>
+<div class="text-destination" >
+  <p>Pack your bags, we found a destination for your crew!</p>
+</div>
 
-      <% trip['trips'].each do |trip| %>
-        <div class="suggested-destination-card-category" >
-          <p>
-            <%= trip['origin']['city']['name'] %> => <%= trip['destination']['city']['name'] %>
-          </p>
-          <p>
-            Price: <%= trip['bestPrice']%>£
-          </p>
-          <p>
-            Arrival: <%= format_date_with_time(trip['departureTime']) %>
-          </p>
-          <p>
-            Departure: <%= format_date_with_time(trip['arrivalTime']) %>
-          </p>
-          <p>
-            <% totaltime = (trip['duration'].to_i)
-            hours = (totaltime / 60)
-            minutes = (totaltime % 60) %>
-            Duration: <%= "#{hours}h #{minutes}min" %>
-          </p>
-        </div>
-      <% end %>
-
+<div class="d-flex justify-content-center">
+  <div class="card-trip-reunion-crew m-2">
+    <div>
+      <h1 class="participants_title"><span class="participants-bottom">REUNION CREW</span></h1>
+        <ul>
+        <article class="participants_profile m-2">
+          <%= image_tag current_user.photo, class: "participants_picture" %>
+          <span class="participants_name"><li><%= current_user.name %></li></span>
+        </article>
+        <% @reunion.participations.each do |participation| %>
+          <article class="participants_profile m-2">
+            <%= image_tag participation.user.photo, class: "participants_picture" %>
+            <span class="participants_name"><li><%= participation.user.name %></li></span>
+          </article>
+          <%end %>
+        </ul>
     </div>
-
-    <h2 class="card-trip-pricing">Total: £<%=trip['totalPrice']%></h2>
+    <br>
+    <div class="button-another-suggestion">
+      <%= link_to "See another suggestion", "#", class: "btn-notify" %>
+    </div>
   </div>
 
-<%end%>
+  <div class="card-trip m-2">
+    <% @trips.take(1).each do |trip| %>
+      <div>
+        <% destination = trip['destination'] %>
+        <%= image_tag "https://source.unsplash.com/random/1000×250/?#{destination['name']} landmark", class: "image-destination" %>
+
+        <div class="card-trip-infos">
+          <%# =destinations['code']%>
+
+          <div style="font-size:20px;">
+            <%=destination['name']%><%= ', ' %>
+            <%=destination['country']%>
+          </div>
+
+          <% trip['trips'].each do |trip| %>
+            <div class="suggested-destination-card-category m-2" >
+              <p>
+                from <strong> <%= trip['origin']['city']['name'] %></strong>
+                <%# <%= trip['destination']['city']['name'] %>
+              </p>
+              <p>
+                Price: <%= trip['bestPrice']%>€
+              </p>
+              <p>
+                <i class="fa-solid fa-plane-departure"></i>: <%= format_date_with_time(trip['departureTime']) %>
+              </p>
+              <p>
+                <i class="fa-solid fa-plane-arrival"></i>: <%= format_date_with_time(trip['arrivalTime']) %>
+              </p>
+              <p>
+                <% totaltime = (trip['duration'].to_i)
+                hours = (totaltime / 60)
+                minutes = (totaltime % 60) %>
+                Duration: <%= "#{hours}h #{minutes}min" %>
+              </p>
+              <div>
+                <%= link_to "Book", "#" %>
+              </div>
+            </div>
+          <% end %>
+
+        </div>
+
+        <h2 class="card-trip-pricing">Total price for your group: <%=trip['totalPrice']%>€</h2>
+      </div>
+
+    <%end%>
+  </div>
+
+</div>

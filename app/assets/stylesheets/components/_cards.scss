@@ -106,3 +106,19 @@ ul {
   border: thin solid $bluereunion;
   text-align: left;
 }
+
+// suggested destinations
+
+.image-destination {
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+object-position: center;
+object-fit: cover;
+height: 250px;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin-top: 0px;
+padding: 0px;
+}

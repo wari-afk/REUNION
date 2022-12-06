@@ -45,3 +45,13 @@
   text-align: center;
   padding-bottom: 4px;
 }
+
+.card-trip-reunion-crew {
+  overflow: hidden;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 25%;
+  border-radius: 1em;
+  font-size: smaller;
+}

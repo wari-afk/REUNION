@@ -40,3 +40,15 @@
   border-radius: 10%;
   box-shadow: 10%;
 }
+
+.text-destination {
+  overflow: hidden;
+  background: rgb(28, 213, 155);
+  opacity: 0.3;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
+  border-radius: 1em;
+  margin: 10px;
+  text-align: center;
+  font-size: smaller;
+}

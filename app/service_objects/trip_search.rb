@@ -29,8 +29,9 @@ class TripSearch
     end
 
     # source => "&origins[]=Munich,MLC,Germany&origins[]=Amsterdam,AMS,Netherlands"
-
-    trip_url = "https://api.tripmatch.org/matches?#{source}&arrivalDate=2022-12-31&flightDurations=15,15,15,15,15&arrivalDifference=10&currency=&sortBy=price&flightDepartures[]=0-24&flightDepartures[]=0-24&flightDepartures[]=0-24&flightDepartures[]=0-24&flightDepartures[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&destination=Europe"
+    chosen_date = decided_date_option.start_date.to_s
+    date = format_date_for_api(chosen_date)
+    trip_url = "https://api.tripmatch.org/matches?#{source}&arrivalDate=#{date}&flightDurations=15,15,15,15,15&arrivalDifference=10&currency=&sortBy=price&flightDepartures[]=0-24&flightDepartures[]=0-24&flightDepartures[]=0-24&flightDepartures[]=0-24&flightDepartures[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&destination=Europe"
 
     trip_response = HTTParty.get(trip_url)
     unique_trips = []
@@ -50,4 +51,13 @@ class TripSearch
     trips
   end
 
+  def decided_date_option
+    @reunion.date_options.sort { |option| option.votes_for.size }.last
+  end
+
+  private
+
+  def format_date_for_api(string_date)
+    DateTime.parse(string_date).strftime("%Y-%m-%d")
+  end
 end

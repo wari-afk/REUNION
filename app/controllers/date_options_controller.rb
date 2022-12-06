@@ -1,9 +1,4 @@
 class DateOptionsController < ApplicationController
-  def new
-    @date_option = DateOption.new
-    @reunion = Reunion.find(params[:reunion_id])
-  end
-
   def create
     @date_option = DateOption.new(date_option_params)
     @reunion = Reunion.find(params[:reunion_id])

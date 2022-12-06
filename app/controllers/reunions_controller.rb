@@ -17,6 +17,7 @@ class ReunionsController < ApplicationController
 
   def show
     @reunion = Reunion.find(params[:id])
+    @date_option = DateOption.new # for the form
   end
 
   private

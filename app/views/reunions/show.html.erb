@@ -7,14 +7,11 @@
     <h2 class="h2-show-reunion"><%= @reunion.description %></h2>
   </div>
 </div>
-<br>
-<br>
 <div class="cards-show-reunion">
   <div class="card-reunion-show text-center">
     <h3 class="h3-show-reunion-info">Offered dates</h3>
-    <%= link_to "Add date option", new_reunion_date_option_path(@reunion), class: "btn-create-show" %>
-    <br>
-    <br>
+    <%= render "date_options/reunion_block" %>
+
     <ul>
       <% @reunion.date_options.each do|date|%>
         <li><%= date.start_date.strftime("%b. %d. %Y") %> - <%= date.end_date.strftime("%b. %d. %Y") %></li>
@@ -24,8 +21,7 @@
   <div class="card-reunion-show text-center">
     <h3 class="h3-show-reunion-info">Participants</h3>
     <%= link_to "Add participants", new_reunion_participation_path(@reunion), class: "btn-create-show" %>
-    <br>
-    <br>
+    
     <ul>
       <% @reunion.participations.each do |participation| %>
         <li><%= participation.user.name %></li>
@@ -33,13 +29,11 @@
     </ul>
   </div>
 </div>
-<br>
-<br>
-  <% if @reunion.date_options.size >= 1 && @reunion.participations.size >= 1 %>
+
+<% if @reunion.date_options.size >= 1 && @reunion.participations.size >= 1 %>
   <div class="container d-flex justify-content-center mb-4">
     <div class="btn-notify">
       <%= link_to "Invite ready. Notify your friends!", reunion_date_options_path(@reunion) %>
     </div>
   </div>
-  <% end %>
-</div>
+<% end %>

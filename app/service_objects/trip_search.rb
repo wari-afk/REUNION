@@ -32,14 +32,19 @@ class TripSearch
     chosen_date = decided_date_option.start_date.to_s
     date = format_date_for_api(chosen_date)
     trip_url = "https://api.tripmatch.org/matches?#{source}&arrivalDate=#{date}&flightDurations=15,15,15,15,15&arrivalDifference=10&currency=&sortBy=price&flightDepartures[]=0-24&flightDepartures[]=0-24&flightDepartures[]=0-24&flightDepartures[]=0-24&flightDepartures[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&flightArrivals[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnDepartures[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&returnArrivals[]=0-24&destination=Europe"
-    p "trip_url is: #{trip_url}"
+    # p "trip_url is: #{trip_url}"
 
     trip_response = HTTParty.get(trip_url)
+
     p "trip_response is: #{trip_response}"
+
+    # Recursive function call if the API fails
+    call if trip_response.code == 500
+
     unique_trips = []
 
     trip_response.each do |trip|
-      p "trip is: #{trip}"
+      # p "trip is: #{trip}"
       unique_trips << trip['destination']['name']
     end
 

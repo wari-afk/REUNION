@@ -1,0 +1,38 @@
+<!-- Button trigger modal -->
+<div class="card-reunion-show text-center" data-controller="participations">
+  <h3 class="h3-show-reunion-info">Participants</h3>
+  <p>Choose each friend you want to invite for this trip.</p>
+  <ul>
+    <% reunion.participations.each do |participation| %>
+      <li><%= participation.user.name %></li>
+    <% end %>
+  </ul>
+  <button type="button" class="btn btn-create-show" data-bs-toggle="modal" data-bs-target="#participationsModal">
+    Add Participants
+  </button>
+  <!-- Modal -->
+  <div class="modal fade 1" id="participationsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Please include your friends' names!</h5>
+          <button type="button" class="btn-close btn-part" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div  class="margin-lg">
+          <div class="modal-body" data-participations-target="input">
+            <%= simple_form_for [reunion, participation], data: { participations_target: "form", action: "submit->participations#submitParticipations" } do |f|%>
+              <%= f.association :user,
+                                          collection: User.all.where.not(id: current_user.id),
+                                          input_html: { multiple: true, data: { controller: "tom-select" }},
+                                          prompt: "Find your friends",
+                                          label: false,
+                                          include_blank: false,
+                                          include_hidden: false %>
+              <%= f.submit "Add", class: "btn-notify" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

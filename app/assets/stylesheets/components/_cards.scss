@@ -7,6 +7,13 @@
   margin-bottom: 50px;
 }
 
+.cards-options {
+  display: flex;
+  margin-right: 50px;
+  margin-left: 50px;
+  justify-content: center;
+}
+
 .card-category {
   background-color: $bluereunion;
   display: flexbox;
@@ -60,17 +67,20 @@
 }
 
 .card-reunion-show {
-  padding: 12px;
+  padding: 30px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  // align-items: center;
+  align-items: center;
   color: $bluereunion;
   background-position: center;
   width: 400px;
-  // align-items: center;
-  // justify-content: center;
-  // margin-right: 200px;
-  // margin-left: 200px;
-  // max-height: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  max-height: 100%;
 }
 
 .cards-show-reunion {

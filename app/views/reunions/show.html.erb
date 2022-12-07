@@ -1,24 +1,14 @@
 <%# <div style="background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,254,255,1) 100%)"> %>
-
-
 <div class="reunion-show-banner">
   <div class="container" >
     <h1 class="h1-show-reunion"><%= @reunion.name %></h1>
     <h2 class="h2-show-reunion"><%= @reunion.description %></h2>
   </div>
 </div>
-
-
-<div class="card-reunion-show text-center" data-controller="date-options">
-  <h3 class="h3-show-reunion-info">Offered dates</h3>
+<div class="cards-options mg-6">
   <%= render "date_options/reunion_date_block", reunion: @reunion, date_option: @date_option %>
+  <%= render "participations/reunion_participants_block", reunion: @reunion, participation: @participation %>
 </div>
-
-<div class="card-reunion-show text-center" data-controller="participations">
-  <h3 class="h3-show-reunion-info">Participants</h3>
-    <%= render "participations/reunion_participants_block", reunion: @reunion, participant: @participant %>
-</div>
-
 <% if @reunion.date_options.size >= 1 && @reunion.participations.size >= 1 %>
   <div class="container d-flex justify-content-center mb-4">
     <div class="btn-notify">

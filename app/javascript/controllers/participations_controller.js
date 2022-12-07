@@ -2,8 +2,12 @@ import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   static targets = ["form"];
+  connect() {
+    console.log("part controller connected");
+  }
 
-  submitParticipantions(event) {
+  submitParticipations(event) {
+    console.log("works");
     event.preventDefault();
     const url = this.formTarget.action;
     fetch(url, {

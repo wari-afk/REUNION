@@ -48,27 +48,17 @@
 
 
 .btn-notify {
-  color: $bluereunion;
-  background-color: $greenlogo;
-  border: 1px solid #030050;
+  color: $darkgreen;
+  background-color: $logogreen;
   padding: 8px 24px;
   border-radius: 50px;
   text-decoration: none;
 }
 
-.btn-notify-primary {
-  color: $bluereunion;
-  background-color: $greenlogo;
-  border: 1px solid #030050;
-  padding: 24px 36px;
-  border-radius: 50px;
-  text-decoration: none;
-}
-
 .btn-notify:hover {
-  color: $bluereunion;
-  background-color: $greenlogo;
-  border: 1px solid #030050;
+  color: $darkgreen;
+  background-color: $logogreen;
+  // border: 1px solid #030050;
   padding: 8px 24px;
   border-radius: 50px;
   text-decoration: none;
@@ -78,6 +68,93 @@
   transition-delay: 0.1s;
   // opacity: 0.1;
 }
+
+.btn-notify-create {
+  color: $darkgreen;
+  background-color: $logogreen;
+  padding: 8px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  height: 64px;
+  width: 400px;
+  font-size: 32px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  transition: all 0.2s linear 0s;
+
+  &:after {
+    content: '\f178';
+    font-family: FontAwesome;
+    position: absolute;
+    opacity: 0;
+    // top: 14px;
+    // right: -20px;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    padding-right: 24px;
+    padding-left:8px;
+    color: $darkgreen;
+
+    &:after {
+      opacity: 1;
+      right: 10px;
+    }
+  }
+
+  // &:after {
+  //   content: "\f178";
+  //   font-family: FontAwesome;
+  //   position: absolute;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   text-decoration: none;
+  //   right: 0;
+  //   top: 0;
+  //   opacity: 0;
+  //   height: 100%;
+  //   width: 40px;
+  //   transition: all 0.2s linear 0s;
+  // }
+
+  // &:hover {
+  //   text-indent: -20px;
+  //   text-decoration: none;
+
+  //   &:after {
+  //     opacity: 1;
+  //     text-indent: 0px;
+  //   }
+  // }
+}
+
+// .btn-notify-create:hover {
+//   color: $darkgreen;
+//   background-color: $intermediarygreen;
+//   padding: 8px 24px;
+//   border-radius: 50px;
+//   text-decoration: none;
+//   height: 64px;
+//   width: 400px;
+//   font-size: 32px;
+//   // transform:scale(1.1,1.1);
+//   // -webkit-transform:scale(1.1,1.1);
+//   // -moz-transform:scale(1.1,1.1);
+//   transition-delay: 0.1s;
+// }
+
+.btn-notify-primary {
+  color: $bluereunion;
+  background-color: $greenlogo;
+  padding: 24px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
 
 .btn-create-show {
   color: $grayreunion;
@@ -96,4 +173,9 @@
   text-decoration: none;
   color: $grayreunion;
   align-items: center;
+}
+
+.btn-primary {
+  text-decoration: none;
+  background-color: $logogreen;
 }

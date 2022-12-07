@@ -1,31 +1,35 @@
-<div class="banner">
-  <h1 class="reunion-home">REUNION</h1>
+<%# <div class="banner">
   <p class="reunion-home"> Plan your travel and meet up in the city of your choice</p>
-</div>
+</div> %>
   <div class="slider-container">
   <div class="slider">
     <div class="slides">
       <div id="slides__1" class="slide slide-img1">
+        <%= link_to "Create a Reunion", new_reunion_path, class: "btn-notify-create" %>
         <span class="slide__text"></span>
         <a class="slide__prev" href="#slides__4" title="Next"></a>
         <a class="slide__next" href="#slides__2" title="Next"></a>
       </div>
       <div id="slides__2" class="slide slide-img2">
+        <%= link_to "Create a Reunion", new_reunion_path, class: "btn-notify" %>
         <span class="slide__text"></span>
         <a class="slide__prev" href="#slides__1" title="Prev"></a>
         <a class="slide__next" href="#slides__3" title="Next"></a>
       </div>
       <div id="slides__3" class="slide slide-img3">
+        <%= link_to "Create a Reunion", new_reunion_path, class: "btn-notify" %>
         <span class="slide__text"></span>
         <a class="slide__prev" href="#slides__2" title="Prev"></a>
         <a class="slide__next" href="#slides__4" title="Next"></a>
       </div>
       <div id="slides__4" class="slide slide-img4">
+        <%= link_to "Create a Reunion", new_reunion_path, class: "btn-notify" %>
         <span class="slide__text"></span>
         <a class="slide__prev" href="#slides__3" title="Prev"></a>
         <a class="slide__next" href="#slides__5" title="Prev"></a>
       </div>
       <div id="slides__5" class="slide slide-img5">
+        <%= link_to "Create a Reunion", new_reunion_path, class: "btn-notify" %>
         <span class="slide__text"></span>
         <a class="slide__prev" href="#slides__4" title="Prev"></a>
         <a class="slide__next" href="#slides__1" title="Prev"></a>
@@ -41,8 +45,27 @@
   </div>
 </div>
 
+<div class="reunion-instructions">
+    <div class="reunion-instructions-cards">
+      <h3>1. CREATE your reunion</h3>
+      <p>Include information about the trip you want to have with your friends.</p>
+    </div>
+    <div class="reunion-instructions-cards">
+      <h3>2. WHEN? Share your availabilities!</h3>
+      <p>Your group will vote for the best possible date!</p>
+    </div>
+    <div class="reunion-instructions-cards">
+      <h3>3. WHO? Tell us who is joining!</h3>
+      <p>Include your friends' information. An email will be sent and they will receive invitation!</p>
+    </div>
+    <div class="reunion-instructions-cards">
+      <h3>4. WHERE? We will suggest you where to go! ✈</h3>
+      <p>Our AI will suggests the best destination! ✈</p>
+    </div>
+</div>
 
-<div class="cards">
+
+<%# <div class="cards">
   <div class="card-category" >
     <h2 class="card-h1"> 1. CREATE your reunion
     </h2>
@@ -76,9 +99,8 @@
     Our AI will suggests the best destination! ✈
     </p>
   </div>
-</div>
+</div> %>
 
-<div class="btn-create-container">
+<%# <div class="btn-create-container">
   <%= link_to "Create a Reunion", new_reunion_path, class: "btn-notify-primary" %>
-</div>
-<br>
+<%# </div> %>

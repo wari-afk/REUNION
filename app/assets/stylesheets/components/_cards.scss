@@ -122,3 +122,25 @@ text-align: center;
 margin-top: 0px;
 padding: 0px;
 }
+
+.reunion-instructions {
+  background-color: $grey;
+  color: $darkgreen;
+  text-align: center;
+  padding: 12px;
+}
+
+.reunion-instructions h3 {
+  color: $darkgreen;
+  font-size: 32px;
+}
+
+.reunion-instructions p {
+  color: $darkgreen;
+  font-size: 16px;
+}
+
+// .reunion-instructions-cards {
+//   margin-top: none;
+//   margin-bottom: none;
+// }

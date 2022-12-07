@@ -1,22 +1,21 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-reunion">
   <div class="container-fluid">
     <%= link_to root_path do %>
-    <%= image_tag "reunionlogo.jpg", class: "navbar-logo" %>
+      <%= image_tag "reunionlogo.jpg", class: "navbar-logo" %>
     <% end %>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
+    <%# <h1 class="navbar-text">REUNION</h1> %>
     <div class="navbar-content" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
-          <%# <li class="nav-item">
-            <a class="nav-link" href="#">Messages</a>
-          </li> %>
-          <li class="nav-item dropdown">
+        <%# <li class="nav-item active">
+          <%= link_to "Home", root_path, class: "nav-link" %>
+        <%# </li> %>
+        <%# <li class="nav-item">
+          <a class="nav-link" href="#">Messages</a>
+        </li> %>
+        <li class="nav-item dropdown">
           <% if user_signed_in? %>
             <% if current_user.photo.attached? %>
               <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false if current_user.photo.attached? %>
@@ -27,9 +26,7 @@
               <%= link_to "Log out",  destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           <% end %>
-          </li>
-          <!--li class="nav-item"-->
-          <!--/li-->
+        </li>
       </ul>
     </div>
   </div>

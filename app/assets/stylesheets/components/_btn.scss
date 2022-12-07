@@ -20,10 +20,6 @@
   color: $grayreunion;
 }
 
-.btn-add {
-  color: $bluereunion;
-}
-
 .btn-back {
   color: $grayreunion;
   border: 1px solid $grayreunion;
@@ -48,27 +44,17 @@
 
 
 .btn-notify {
-  color: $bluereunion;
-  background-color: $greenlogo;
-  border: 1px solid #030050;
+  color: $darkgreen;
+  background-color: $logogreen;
   padding: 8px 24px;
   border-radius: 50px;
   text-decoration: none;
 }
 
-.btn-notify-primary {
-  color: $bluereunion;
-  background-color: $greenlogo;
-  border: 1px solid #030050;
-  padding: 24px 36px;
-  border-radius: 50px;
-  text-decoration: none;
-}
-
 .btn-notify:hover {
-  color: $bluereunion;
-  background-color: $greenlogo;
-  border: 1px solid #030050;
+  color: $darkgreen;
+  background-color: $logogreen;
+  // border: 1px solid #030050;
   padding: 8px 24px;
   border-radius: 50px;
   text-decoration: none;
@@ -79,23 +65,140 @@
   // opacity: 0.1;
 }
 
-.btn-create-show {
-  color: $grayreunion;
-  border: 1px solid #a89999;
+// .btn-notify-create {
+//   color: $darkgreen;
+//   background-color: $logogreen;
+//   padding: 8px 24px;
+//   border-radius: 50px;
+//   text-decoration: none;
+//   height: 64px;
+//   width: 400px;
+//   font-size: 32px;
+//   cursor: pointer;
+//   display: inline-block;
+//   position: relative;
+//   transition: 0.5s;
+//   transition: all 0.2s linear 0s;
+
+//   &:after {
+//     content: '\f178';
+//     font-family: FontAwesome;
+//     position: absolute;
+//     opacity: 0;
+//     // top: 14px;
+//     // right: -20px;
+//     transition: 0.5s;
+//   }
+
+//   &:hover {
+//     padding-right: 24px;
+//     padding-left:8px;
+//     color: $darkgreen;
+
+//     &:after {
+//       opacity: 1;
+//       right: 10px;
+//     }
+//   }
+// }
+
+// .btn-notify-create {
+  // color: $darkgreen;
+  // padding: 8px 24px;
+  // border-radius: 50px;
+  // text-decoration: none;
+  // height: 64px;
+  // width: 400px;
+  // font-size: 32px;
+  // letter-spacing: 5px;
+
+//   &:hover, &:active {
+//   letter-spacing: 5px;
+// }
+
+//   &:after, &:before {
+//     backface-visibility: hidden;
+//     color: $darkgreen;
+//     border: 1px solid rgba(#fff, 0);
+//     bottom: 0px;
+//     content: " ";
+//     display: block;
+//     margin: 0 auto;
+//     position: relative;
+//     transition: all 280ms ease-in-out;
+//     width: 0;
+//   }
+
+//   &:after, &:hover:before {
+//     backface-visibility: hidden;
+//     border-color: #fff;
+//     color: $darkgreen;
+//     transition: width 350ms ease-in-out;
+//     width: 70%;
+//     text-decoration: none;
+//   }
+
+//   &:hover:before {
+//     color: $darkgreen;
+//     bottom: auto;
+//     top: 0;
+//     width: 70%;
+//     text-decoration: none;
+//   }
+// }
+
+
+
+.btn-2 {
+  color: $darkgreen;
   padding: 8px 24px;
   border-radius: 50px;
-  font-weight: bold;
-  // opacity: 0.6;
-  transition: opacity 0.3s ease;
   text-decoration: none;
-  align-items: center;
+  height: 64px;
+  width: 600px;
+  font-size: 32px;
+  letter-spacing: 5px;
+  letter-spacing: 0;
 }
 
-.btn-create-show:hover {
-  opacity: 0.6;
-  text-decoration: none;
-  color: $grayreunion;
-  align-items: center;
+.btn-2:hover,
+.btn-2:active {
+letter-spacing: 5px;
+color: $darkgreen;
+padding: 8px 24px;
+border-radius: 50px;
+text-decoration: none;
+height: 64px;
+width: 600px;
+font-size: 32px;
+letter-spacing: 5px;
+}
+
+.btn-2:after,
+.btn-2:before {
+backface-visibility: hidden;
+border: 1px solid rgba(#fff, 0);
+bottom: 0px;
+content: " ";
+display: block;
+margin: 0 auto;
+position: relative;
+transition: all 280ms ease-in-out;
+width: 0;
+}
+
+.btn-2:hover:after,
+.btn-2:hover:before {
+backface-visibility: hidden;
+border-color: $darkgreen;
+transition: width 350ms ease-in-out;
+width: 70%;
+}
+
+.btn-2:hover:before {
+bottom: auto;
+top: 0;
+width: 70%;
 }
 
 .btn-book {

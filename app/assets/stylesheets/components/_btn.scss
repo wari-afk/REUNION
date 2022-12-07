@@ -1,70 +1,4 @@
-.btn-create {
-  color: $grayreunion;
-  border: 1px solid #a89999;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: bold;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  text-decoration: none;
-}
-
-.btn-create-container {
-  justify-content: center;
-  display: flex;
-}
-
-.btn-create:hover {
-  opacity: 1;
-  text-decoration: none;
-  color: $grayreunion;
-}
-
-.btn-back {
-  color: $grayreunion;
-  border: 1px solid $grayreunion;
-  padding: 8px 24px;
-  border-radius: 50px;
-  // opacity: 0.3;
-  // transition: opacity 0.3s ease;
-  text-decoration: none;
-}
-
-.btn-back:hover {
-  color: $grayreunion;
-  border: 1px solid $grayreunion;
-  padding: 8px 24px;
-  border-radius: 50px;
-  text-decoration: none;
-  opacity: 50%;
-}
-
-
-
-
-
-.btn-notify {
-  color: $darkgreen;
-  background-color: $logogreen;
-  padding: 8px 24px;
-  border-radius: 50px;
-  text-decoration: none;
-}
-
-.btn-notify:hover {
-  color: $darkgreen;
-  background-color: $logogreen;
-  // border: 1px solid #030050;
-  padding: 8px 24px;
-  border-radius: 50px;
-  text-decoration: none;
-  transform:scale(1.1,1.1);
-  -webkit-transform:scale(1.1,1.1);
-  -moz-transform:scale(1.1,1.1);
-  transition-delay: 0.1s;
-  // opacity: 0.1;
-}
-
+// principal button for homepage
 .btn-2 {
   color: $darkgreen;
   padding: 8px 24px;
@@ -75,48 +9,112 @@
   font-size: 32px;
   letter-spacing: 5px;
   letter-spacing: 0;
+  font-weight: bold;
 }
 
 .btn-2:hover,
 .btn-2:active {
-letter-spacing: 5px;
-color: $darkgreen;
-padding: 8px 24px;
-border-radius: 50px;
-text-decoration: none;
-height: 64px;
-width: 600px;
-font-size: 32px;
-letter-spacing: 5px;
+  letter-spacing: 5px;
+  color: $darkgreen;
+  padding: 8px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  height: 64px;
+  width: 600px;
+  font-size: 32px;
+  letter-spacing: 5px;
 }
 
 .btn-2:after,
 .btn-2:before {
-backface-visibility: hidden;
-border: 1px solid rgba(#fff, 0);
-bottom: 0px;
-content: " ";
-display: block;
-margin: 0 auto;
-position: relative;
-transition: all 280ms ease-in-out;
-width: 0;
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
 }
 
 .btn-2:hover:after,
 .btn-2:hover:before {
-backface-visibility: hidden;
-border-color: $darkgreen;
-transition: width 350ms ease-in-out;
-width: 70%;
+  backface-visibility: hidden;
+  border-color: $darkgreen;
+  transition: width 350ms ease-in-out;
+  width: 70%;
 }
 
 .btn-2:hover:before {
-bottom: auto;
-top: 0;
-width: 70%;
+  bottom: auto;
+  top: 0;
+  width: 70%;
 }
 
-.btn-book {
+// general button
+.btn-1 {
+  color: #bdbdbd;
+  background-color: #072e21;
+  padding: 8px 24px;
+  border-radius: 50px;
   text-decoration: none;
+  border: none;
 }
+
+.btn-1:hover {
+  color: $darkgreen;
+  background-color: #bdbdbd;
+  // border: 1px solid #030050;
+  padding: 8px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  transition-delay: 0.1s;
+  // opacity: 0.1;
+  border: none;
+}
+
+// delete buttons pending confirmation
+// .btn-back {
+//   color: $grayreunion;
+//   border: 1px solid $grayreunion;
+//   padding: 8px 24px;
+//   border-radius: 50px;
+//   // opacity: 0.3;
+//   // transition: opacity 0.3s ease;
+//   text-decoration: none;
+// }
+
+// .btn-back:hover {
+//   color: $grayreunion;
+//   border: 1px solid $grayreunion;
+//   padding: 8px 24px;
+//   border-radius: 50px;
+//   text-decoration: none;
+//   opacity: 50%;
+// }
+
+// .btn-create {
+//   color: $grayreunion;
+//   border: 1px solid #a89999;
+//   padding: 8px 24px;
+//   border-radius: 50px;
+//   font-weight: bold;
+//   opacity: 0.6;
+//   transition: opacity 0.3s ease;
+//   text-decoration: none;
+// }
+
+// .btn-create-container {
+//   justify-content: center;
+//   display: flex;
+// }
+
+// .btn-create:hover {
+//   opacity: 1;
+//   text-decoration: none;
+//   color: $grayreunion;
+// }

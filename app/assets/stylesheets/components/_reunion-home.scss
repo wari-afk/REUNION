@@ -10,7 +10,7 @@ h1 {
   margin-right: 10px;
   margin-top: 40px;
   font-size: 50px;
-  color: $greenlogo;
+  color: #072e21;
 }
 
 h3 {
@@ -26,7 +26,6 @@ h3 {
   margin-bottom: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: gray;
 }
 
 p {
@@ -39,7 +38,6 @@ p {
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  color: #a89999;
 }
 
 .h1-show-reunion {
@@ -51,7 +49,6 @@ p {
   display: flex;
   align-items: center;
   font-size: 50px;
-  color: $bluereunion;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -64,7 +61,6 @@ p {
   display: flex;
   align-items: center;
   font-size: 50px;
-  color: $grayreunion;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -73,5 +69,4 @@ p {
   font-weight: 300;
   display: flex;
   font-size: 30px;
-  color: $grayreunion;
 }

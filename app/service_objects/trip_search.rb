@@ -48,7 +48,7 @@ class TripSearch
       unique_trips.delete(trip['destination']['name'])
     end
 
-    trips
+    trips.take(3)
   end
 
   def decided_date_option

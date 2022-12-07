@@ -2,6 +2,7 @@
 <div class="card-reunion-show text-center" data-controller="date-options">
   <h3 class="h3-show-reunion-info">Choose dates</h3>
   <p>In this step, you can choose few dates and share your availability with your friends. PS: They will vote afterwards.</p>
+  <%= image_tag "date-options.png", class: "icon-show"%>
   <ul>
     <% reunion.date_options.each do|date|%>
       <li><%= date.start_date.strftime("%b. %d. %Y") %> - <%= date.end_date.strftime("%b. %d. %Y") %></li>

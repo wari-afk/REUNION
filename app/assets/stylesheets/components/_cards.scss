@@ -9,9 +9,14 @@
 
 .cards-options {
   display: flex;
-  margin-right: 50px;
-  margin-left: 50px;
+  margin-right: 30px;
+  margin-left: 30px;
   justify-content: center;
+}
+
+.icon-show {
+  width: 350px;
+  margin: auto;
 }
 
 .card-category {
@@ -120,17 +125,17 @@ ul {
 // suggested destinations
 
 .image-destination {
-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-object-position: center;
-object-fit: cover;
-height: 250px;
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-margin-top: 0px;
-padding: 0px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  object-position: center;
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0px;
+  padding: 0px;
 }
 
 .reunion-instructions {

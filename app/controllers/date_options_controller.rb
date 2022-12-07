@@ -13,6 +13,10 @@ class DateOptionsController < ApplicationController
     end
   end
 
+  def index
+    @reunion = Reunion.find(params[:reunion_id])
+    @date_options = @reunion.date_options
+  end
 
   def upvote
     # params[:date_option_ids] => ["8", "9"]

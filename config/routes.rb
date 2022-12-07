@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :reunions, only: [:new, :create, :show] do
     resources :participations, only: [:create, :show]
     resources :date_options, only: [:create, :index]
-    resources :suggested_destinations, only: [:show]
+    resources :suggested_destinations, only: [:new, :show]
   end
 
   post "date_options/upvote", to: "date_options#upvote", as: "upvote_date_option"

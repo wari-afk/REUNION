@@ -40,9 +40,9 @@
   </div>
 
   <div class="card-trip m-1">
-     <% @trips.each do |trip| %>
-      <div>
-        <div class="d-none" data-display-destination-target="card">
+    <% @trips.each do |trip| %>
+      <div class="d-none" data-display-destination-target="card">
+        <div>
           <% destination = trip['destination'] %>
             <div class="image-destination" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url(https://source.unsplash.com/random/1000×250/?<%=destination['name']%>%20landmark)">
               <div class="text-white">

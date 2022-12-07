@@ -2,8 +2,7 @@
   <h1 style="text-align:center;">Create your reunion</h1>
 </div>
 <h6 style="font-weight:500; text-align:center; padding-top:40px; padding-bottom:30px;">Name your reunion and add description to your reunion</h6>
-<div class="container" style=" background-color:white; position: relative; width:40%; outline: solid 0.5px gainsboro; border-radius:5px;margin-left:auto; margin-right:auto;padding:20px;">
-
+<div class="container create-form">
   <%= simple_form_for @reunion do |f|%>
     <%= f.input :name, placeholder: "Give your reunion a name" %>
     <%= f.input :description, placeholder: "Tell us what you plan is" %>

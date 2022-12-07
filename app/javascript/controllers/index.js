@@ -4,11 +4,14 @@
 
 import { application } from "./application"
 
+import DisplayDestinationController from "./display_destination_controller"
+application.register("display-destination", DisplayDestinationController)
+
 import FlatpickrController from "./flatpickr_controller"
 application.register("flatpickr", FlatpickrController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import TomSelectController from "./tom_select_controller.js"
+import TomSelectController from "./tom_select_controller"
 application.register("tom-select", TomSelectController)

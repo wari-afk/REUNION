@@ -17,7 +17,7 @@
   <p>Based on each of your crew member, we selected a city accessible for everyone!</p>
 </div>
 
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center" data-controller="display-destination">
   <div class="card-trip-reunion-crew m-2">
     <div>
       <h1 class="participants_title"><span class="participants-bottom">REUNION CREW</span></h1>
@@ -36,13 +36,13 @@
     </div>
     <br>
     <div class="button-another-suggestion">
-      <%= link_to "See another suggestion", "#", class: "btn-notify" %>
+      <button class="btn-notify" data-action="click->display-destination#nextCard">See another suggestion</button>
     </div>
   </div>
 
   <div class="card-trip m-2">
-    <% @trips.take(1).each do |trip| %>
-      <div>
+    <% @trips.each do |trip| %>
+      <div class="d-none" data-display-destination-target="card">
         <% destination = trip['destination'] %>
         <%= image_tag "https://source.unsplash.com/random/1000×250/?#{destination['name']} landmark", class: "image-destination" %>
 
@@ -85,7 +85,6 @@
 
         <h2 class="card-trip-pricing">Total price for your group: <%=trip['totalPrice']%>€</h2>
       </div>
-
     <%end%>
   </div>
 

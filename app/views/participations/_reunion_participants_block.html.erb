@@ -2,7 +2,7 @@
 <div class="card-reunion-show text-center" data-controller="participations">
   <h3 class="h3-show-reunion-info">Participants</h3>
   <p>Choose each friend you want to invite for this trip.</p>
-  <%= image_tag "add-participants.png", class: "icon-show"%>
+  <%= image_tag "friends-show.png", class: "icon-show"%>
   <ul>
     <% reunion.participations.each do |participation| %>
       <li><%= participation.user.name %></li>

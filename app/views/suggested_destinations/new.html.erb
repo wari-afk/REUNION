@@ -1,0 +1,92 @@
+<%#
+  trip is an array of 3 destinations
+  we want to display index 0
+  we want to hide index 1, 2 but keep them at hand if user click on Suggest Another
+%>
+
+<div class="reunion-show-banner-suggested">
+  <div class="container" >
+    <h1 class="h1-show-reunion"><%= @reunion.name %></h1>
+    <h2><%= @reunion.description %></h2>
+  </div>
+</div>
+
+<div>
+  <p>Based on each of your crew member, we selected a city accessible to everyone!</p>
+</div>
+
+
+<div class="d-flex justify-content-center" data-controller="display-destination">
+  <div class="card-trip-reunion-crew m-1">
+    <div>
+      <h1 class="participants_title"><span class="participants-bottom">REUNION CREW</span></h1>
+        <ul>
+        <article class="participants_profile m-2">
+          <%= image_tag current_user.photo, class: "participants_picture" %>
+          <span class="participants_name"><li><%= current_user.name %> - flying from <%= current_user.city_of_origin %></li></span>
+        </article>
+        <% @reunion.participations.each do |participation| %>
+          <article class="participants_profile m-2">
+            <%= image_tag participation.user.photo, class: "participants_picture" %>
+            <span class="participants_name"><li><%= participation.user.name %> - flying from <%= participation.user.city_of_origin %> </li></span>
+          </article>
+          <%end %>
+        </ul>
+    </div>
+    <br>
+    <div class="button-another-suggestion">
+      <button class="btn-notify" data-action="click->display-destination#nextCard">See another suggestion</button>
+    </div>
+  </div>
+
+  <div class="card-trip m-1">
+    <% @trips.each do |trip| %>
+      <div class="d-none" data-display-destination-target="card">
+        <div>
+          <% destination = trip['destination'] %>
+            <div class="image-destination" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url(https://source.unsplash.com/random/1000×250/?<%=destination['name']%>%20landmark)">
+              <div class="text-white">
+                We suggest going to
+                <br>
+                <h2><strong><%=destination['name']%><%= ', ' %> <%=destination['country']%></strong></h2>
+              </div>
+            </div>
+        </div>
+
+        <div class="card-trip-infos">
+          <%# =destinations['code']%>
+          <% trip['trips'].each do |trip| %>
+            <div class="suggested-destination-card-category m-2" >
+              <p>
+                from <strong> <%= trip['origin']['city']['name'] %></strong>
+                <%# <%= trip['destination']['city']['name'] %>
+              </p>
+              <p>
+                Price: <%= trip['bestPrice']%>€
+              </p>
+              <p>
+                <i class="fa-solid fa-plane-departure"></i>: <%= format_date_with_time(trip['departureTime']) %>
+              </p>
+              <p>
+                <i class="fa-solid fa-plane-arrival"></i>: <%= format_date_with_time(trip['arrivalTime']) %>
+              </p>
+              <p>
+                <% totaltime = (trip['duration'].to_i)
+                hours = (totaltime / 60)
+                minutes = (totaltime % 60) %>
+                Duration: <%= "#{hours}h #{minutes}min" %>
+              </p>
+              <p>
+                <%= link_to "Book", "#", class: "btn-book" %>
+              </p>
+            </div>
+          <% end %>
+
+        </div>
+
+        <h2 class="card-trip-pricing">Total price for your group: <%=trip['totalPrice']%>€</h2>
+      </div>
+    <%end%>
+  </div>
+
+</div>

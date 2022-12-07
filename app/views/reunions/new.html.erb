@@ -9,11 +9,10 @@
         <%= simple_form_for @reunion do |f|%>
           <%= f.input :name, placeholder: "Give your reunion a name" %>
           <%= f.input :description, placeholder: "Tell us what you plan is" %>
-          <div style="display:flex;position:relative;display:inline;">
-            <%= link_to "Go back", :back %>
-            <div style="float:right">
-              <%= f.submit :create, class: "btn btn-primary" %>
-            </div>
+          <div style="display:flex; justify-content: space-between;">
+            <%= link_to "Go back", root_path, { :class => "btn-back" } %>
+            <%= f.submit :create, class: "btn-notify" %>
+          </div>
           </div>
         <% end %>
       </div>

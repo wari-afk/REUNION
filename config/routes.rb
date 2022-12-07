@@ -11,5 +11,5 @@ Rails.application.routes.draw do
     resources :suggested_destinations, only: [:show]
   end
 
-  post "date_options/:date_option_id/upvote", to: "date_options#upvote", as: "upvote_date_option"
+  post "date_options/upvote", to: "date_options#upvote", as: "upvote_date_option"
 end

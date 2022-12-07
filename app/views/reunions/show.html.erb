@@ -2,7 +2,7 @@
 <div class="reunion-show-banner">
   <div class="container" >
     <h1 class="h1-show-reunion"><%= @reunion.name %></h1>
-    <h2 class="h2-show-reunion"><%= @reunion.description %></h2>
+    <p><%= @reunion.description %></p>
   </div>
 </div>
 <div class="cards-options mg-6">
@@ -11,8 +11,6 @@
 </div>
 <% if @reunion.date_options.size >= 1 && @reunion.participations.size >= 1 %>
   <div class="container d-flex justify-content-center mb-4">
-    <div class="btn-notify">
-      <%= link_to "Invite ready. Notify your friends!", reunion_date_options_path(@reunion) %>
-    </div>
+      <%= link_to "Invite ready. Notify your friends!", reunion_date_options_path(@reunion), class: "btn-notify" %>
   </div>
 <% end %>

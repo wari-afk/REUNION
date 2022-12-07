@@ -1,7 +1,10 @@
 .cards {
-  display: flex;
   justify-content: space-evenly;
   align-items: center;
+  display: flex;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-bottom: 50px;
 }
 
 .cards-options {
@@ -25,10 +28,11 @@
   margin-bottom: 20px;
   // background-size: 100% 100%;
   padding: 24px;
-  width: 400px;
+  // width: 400px;
   height: 180px;
   border: 1px solid #030050;
   text-align: center;
+  width: 50%;
 }
 
 .card-h1 {
@@ -86,4 +90,45 @@
 
 ul {
   list-style-type: none;
+}
+
+.table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  // min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin: auto;
+  width: 50%;
+}
+
+.table thead tr {
+  background-color: $greenlogo;
+  color: $bluereunion;
+  text-align: left;
+  border: thin solid $bluereunion;
+}
+
+.table tbody tr {
+  color: $bluereunion;
+}
+
+.table tbody tr {
+  border: thin solid $bluereunion;
+  text-align: left;
+}
+
+// suggested destinations
+
+.image-destination {
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+object-position: center;
+object-fit: cover;
+height: 250px;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin-top: 0px;
+padding: 0px;
 }

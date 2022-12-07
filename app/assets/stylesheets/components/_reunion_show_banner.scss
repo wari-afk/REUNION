@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
-  height: 400px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,3 +18,23 @@
 //   // height: auto;
 //   // object-fit: contain;
 // }
+
+.reunion-show-banner-suggested {
+  background-image: url(https://images.unsplash.com/photo-1478860409698-8707f313ee8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFwfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 200px;
+  opacity: 0.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0px;
+  padding: 0px;
+
+p{
+color: $bluereunion;
+font-weight: bold;
+}
+}

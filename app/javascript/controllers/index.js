@@ -15,3 +15,10 @@ application.register("flatpickr", FlatpickrController);
 
 import HelloController from "./hello_controller";
 application.register("hello", HelloController);
+
+import DisplayDestinationController from "./display_destination_controller"
+application.register("display-destination", DisplayDestinationController)
+
+import TomSelectController from "./tom_select_controller"
+application.register("tom-select", TomSelectController)
+

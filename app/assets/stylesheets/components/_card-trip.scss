@@ -3,14 +3,13 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 75%;
-  border-radius: 1em;
+  border-radius: 8px;
   font-size: smaller;
 }
 
-.card-trip > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
+.card-trip .image-destination {
+  background-size: cover;
+  background-position: center;
 }
 
 .card-trip h2 {
@@ -52,6 +51,6 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 25%;
-  border-radius: 1em;
+  border-radius: 8px;
   font-size: smaller;
 }

@@ -77,6 +77,31 @@
   border: none;
 }
 
+// general button opposite
+.btn-3 {
+  color: $darkgreen;
+  background-color: #bdbdbd;
+  padding: 8px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-3:hover {
+  color: #bdbdbd;
+  background-color: #072e21;
+  // border: 1px solid #030050;
+  padding: 8px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  transition-delay: 0.1s;
+  // opacity: 0.1;
+  border: none;
+}
+
 // delete buttons pending confirmation
 // .btn-back {
 //   color: $grayreunion;

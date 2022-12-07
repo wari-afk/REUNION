@@ -7,7 +7,7 @@
       <li><%= participation.user.name %></li>
     <% end %>
   </ul>
-  <button type="button" class="btn btn-create-show" data-bs-toggle="modal" data-bs-target="#participationsModal">
+  <button type="button" class="btn btn-create-show btn-3" data-bs-toggle="modal" data-bs-target="#participationsModal">
     Add Participants
   </button>
   <!-- Modal -->
@@ -28,7 +28,7 @@
                                           label: false,
                                           include_blank: false,
                                           include_hidden: false %>
-              <%= f.submit "Add", class: "btn-1", data: { bs_dismiss: "modal" } %>
+              <%= f.submit "Add", class: "btn-2", data: { bs_dismiss: "modal" } %>
             <% end %>
           </div>
         </div>

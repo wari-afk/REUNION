@@ -6,7 +6,7 @@
   <%= render "participations/reunion_participants_block", reunion: @reunion, participation: @participation %>
 </div>
 <% if @reunion.date_options.size >= 1 && @reunion.participations.size >= 1 %>
-  <div class="container d-flex justify-content-center mb-4">
-    <span><%= link_to "Invite ready. Notify your friends!", reunion_date_options_path(@reunion), class: "btn-4" %><span>
-      </div>
-    <% end %>
+  <div class="container d-flex justify-content-center mb-6">
+    <%= link_to "Invite ready. Notify your friends!", reunion_date_options_path(@reunion), class: "btn-4" %>
+  </div>
+<% end %>

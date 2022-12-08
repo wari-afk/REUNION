@@ -1,0 +1,21 @@
+<div class="card-trip-reunion-crew m-1">
+  <div>
+    <h1 class="participants_title"><span class="participants-bottom">REUNION CREW</span></h1>
+      <ul>
+      <article class="participants_profile m-2">
+        <%= image_tag user.photo, class: "participants_picture" %>
+        <span class="participants_name"><li><%= user.name %> - flying from <%= user.city_of_origin %></li></span>
+      </article>
+      <% reunion.participations.each do |participation| %>
+        <article class="participants_profile m-2">
+          <%= image_tag participation.user.photo, class: "participants_picture" %>
+          <span class="participants_name"><li><%= participation.user.name %> - flying from <%= participation.user.city_of_origin %> </li></span>
+        </article>
+        <%end %>
+      </ul>
+  </div>
+  <br>
+  <div class="button-another-suggestion">
+    <button class="btn-notify" data-action="click->display-destination#nextCard">See another suggestion</button>
+  </div>
+</div>

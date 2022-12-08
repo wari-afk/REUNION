@@ -15,7 +15,7 @@
   // padding: 12px;
   // box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   align-items: center;
-  color: $bluereunion;
+  color: $darkgreen;
   background-position: center;
   margin-right: 200px;
   margin-left: 200px;
@@ -26,7 +26,7 @@
   padding: 30px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   align-items: center;
-  color: $bluereunion;
+  color: $darkgreen;
   background-position: center;
   width: 400px;
   height: auto;
@@ -53,18 +53,19 @@ ul {
 }
 
 .table thead tr {
-  background-color: $greenlogo;
-  color: $bluereunion;
+  background-color: $darkgreen;
+  color: $grey;
   text-align: left;
-  border: thin solid $bluereunion;
+  font-size: 24px;
+  border: thin solid $darkgreen;
 }
 
 .table tbody tr {
-  color: $bluereunion;
+  color: $darkgreen;
 }
 
 .table tbody tr {
-  border: thin solid $bluereunion;
+  border: thin solid $darkgreen;
   text-align: left;
 }
 

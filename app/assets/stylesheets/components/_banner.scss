@@ -14,6 +14,15 @@
   align-items: center;
   padding-top: 24px;
   padding-bottom: 32px;
+  margin-bottom: 40px;
+
+  p {
+    font-size: 40px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
 }
 
 .banner-create {
@@ -25,12 +34,21 @@
   position: absolute;
   right: 0px;
   height: calc(100vh - 60px - 100px);
-  // padding-top: 24px;
-  // padding-bottom: 32px;
+  padding-top: 24px;
+  padding-bottom: 32px;
 }
 
 .banner-show-reunion {
   background-image: linear-gradient(227deg, rgba(255, 254, 254, 0.114), rgba(255, 255, 255, 0.182)), asset-url("create-reunion.jpg");
+  background-size: cover;
+  width: 50%;
+  position: absolute;
+  left: 0px;
+  height: calc(100vh - 60px - 100px);
+}
+
+.banner-votes {
+  background-image: linear-gradient(227deg, rgba(255, 254, 254, 0.114), rgba(255, 255, 255, 0.182)), asset-url("voting-page.jpg");
   background-size: cover;
   width: 50%;
   position: absolute;

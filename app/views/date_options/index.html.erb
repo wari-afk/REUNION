@@ -8,9 +8,9 @@
 <div data-controller="animation">
 
   <div data-animation-target="hideOnAnimation">
-    <div style="padding: 30px;">
+    <%# <div style="padding: 30px;">
       <h1>Votes are open!</h1>
-    </div>
+    </div> %>
 
     <!-- FORM FOR PARTICIPATION -->
     <% unless @reunion.user == current_user %>
@@ -41,12 +41,20 @@
       </div>
     <% end %>
 
+<div class="banner-votes">
+</div>
+
+<div class="banner-create">
+<h1>Votes are open!</h1>
     <!-- TABLE WITH VOTES -->
     <table class="table">
       <thead>
         <tr>
           <th>Dates options</th>
-          <th>Votes</th>
+          <%# <th>Votes</th> %>
+          <th><div class="table-links">
+            <a><i class="fa-solid fa-check-to-slot"></i></a>
+          </div></th>
         </tr>
       </thead>
       <tbody>
@@ -62,12 +70,11 @@
       </tbody>
     </table>
     <br>
-
     <div class="btn-create-container">
       <%= link_to "See our AI Generated Suggestions",  new_reunion_suggested_destination_path, class: "btn-notify", data: { action: "click->animation#loadingSpinner" } %>
     </div>
-
   </div>
+</div>
 
   <div style="display: block; margin-left: auto; margin-right: auto; width: 40%;">
     <%= image_tag "flight.gif", class: "d-none", data: { animation_target: "screen" } %>

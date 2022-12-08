@@ -9,7 +9,7 @@
 
   <div data-animation-target="hideOnAnimation">
     <div style="padding: 30px;">
-      <h1> Participation Table, Votes are open!</h1>
+      <h1>Votes are open!</h1>
     </div>
 
     <!-- FORM FOR PARTICIPATION -->
@@ -53,12 +53,10 @@
         <% @date_options.each do |date_option| %>
           <tr>
             <th>
-              <li>
                 <%= date_option.start_date.strftime(("%b. %d. %Y")) %> -
                 <%= date_option.end_date.strftime(("%b. %d. %Y")) %>
-              </li>
             </th>
-            <th>Votes: <%= date_option.votes_for.size %></th>
+            <th><%= date_option.votes_for.size %></th>
           </tr>
         <% end %>
       </tbody>

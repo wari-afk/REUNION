@@ -5,7 +5,7 @@ export default class extends Controller {
 
   static values = {
     reunionId: String,
-  }
+  };
 
   submitParticipations(event) {
     event.preventDefault();
@@ -18,9 +18,9 @@ export default class extends Controller {
       .then((response) => response.text())
       .then((data) => {
         const htmlMarkup = `<div class="container d-flex justify-content-center">
-          <a class="btn-notify mb-4" href="/reunions/${this.reunionIdValue}/date_options">Invite ready. Notify your friends!</a>
+          <a class="btn-4" href="/reunions/${this.reunionIdValue}/date_options">Invite ready. Notify your friends!</a>
         </div>
-        `
+        `;
         this.element.parentElement.insertAdjacentHTML("afterend", htmlMarkup);
         this.element.outerHTML = data;
       });

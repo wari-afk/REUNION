@@ -1,14 +1,14 @@
 <div class="card-new-participant">
-    <h3 style="text-align:center;">Invite your friends to <strong> <%=@reunion.name%></strong>!</h3>
-    <%= simple_form_for [@reunion, @participation] do |f|%>
-      <%= f.association :user,
+  <h3 style="text-align:center;">Invite your friends to <strong> <%=@reunion.name%></strong>!</h3>
+  <%= simple_form_for [@reunion, @participation] do |f|%>
+    <%= f.association :user,
                         collection: User.all.where.not(id: current_user.id),
                         input_html: { multiple: true, data: { controller: "tom-select" }},
                         prompt: "Find your friends",
                         label: false,
                         include_blank: false,
                         include_hidden: false %>
-      <%= link_to "Go back", :back, { :class => "btn-back" } %>
-      <%= f.submit "Add", class: "btn-notify" %>
-    <% end %>
+    <%= link_to "Go back", :back, { :class => "btn-back" } %>
+    <%= f.submit "Add", class: "btn-1" %>
+  <% end %>
 </div>

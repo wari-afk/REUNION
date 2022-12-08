@@ -1,7 +1,8 @@
 <!-- Button trigger modal -->
 <div class="card-reunion-show text-center" data-controller="participations">
+  <%= image_tag "friends-show.png", class: "icon-show"%>
   <h3 class="h3-show-reunion-info">Participants</h3>
-  <p>Choose each friend you want to invite for this trip.</p>
+  <p>Select your friends for this trip! We will notify them.</p>
   <ul>
     <% reunion.participations.each do |participation| %>
       <li><%= participation.user.name %></li>

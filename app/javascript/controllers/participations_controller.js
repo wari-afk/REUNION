@@ -17,8 +17,8 @@ export default class extends Controller {
     })
       .then((response) => response.text())
       .then((data) => {
-        const htmlMarkup = `<div class="container d-flex justify-content-center mb-4">
-          <a class="btn-notify" href="/reunions/${this.reunionIdValue}/date_options">Invite ready. Notify your friends!</a>
+        const htmlMarkup = `<div class="container d-flex justify-content-center">
+          <a class="btn-notify mb-4" href="/reunions/${this.reunionIdValue}/date_options">Invite ready. Notify your friends!</a>
         </div>
         `
         this.element.parentElement.insertAdjacentHTML("afterend", htmlMarkup);

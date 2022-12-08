@@ -3,21 +3,17 @@
   we want to display index 0
   we want to hide index 1, 2 but keep them at hand if user click on Suggest Another
 %>
-<div class="reunion-show-banner-suggested">
+<div class="reunion-show-banner-suggested text-center">
   <div class="container" >
-    <h1 class="h1-show-reunion"><%= @reunion.name %></h1>
+    <h1 class="h1-show-reunion text-center"><%= @reunion.name %></h1>
     <h2><%= @reunion.description %></h2>
   </div>
 </div>
-
-<div class ="text-paragraph">
+<div class ="text-paragraph text-center">
   <h3>Based on each of your crew member, we selected a city accessible to everyone!</h3>
-
 </div>
 <div class="d-flex justify-content-center" data-controller="display-destination">
-
   <%#= render "side_panel", user: current_user, reunion: @reunion %>
-  
   <div class="card-trip m-1">
     <% @trips.each do |trip| %>
       <div class="d-none" data-display-destination-target="card">
@@ -66,7 +62,7 @@
         </div>
         <div class="suggested-destination-button">
           <h3 class="home-page-text price-text">Total price for your group: <%=trip['totalPrice']%>€</h3>
-          <button class="btn-notify" data-action="click->display-destination#nextCard">See another suggestion</button>
+          <button class="btn-3" data-action="click->display-destination#nextCard">See another suggestion</button>
         </div>
       </div>
     <%end%>

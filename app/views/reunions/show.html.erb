@@ -1,9 +1,8 @@
 <%# <div style="background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,254,255,1) 100%)"> %>
 <%# <div class="reunion-show-banner"> %>
-<div class="container" >
-  <h1 class="h1-show-reunion"><%= @reunion.name %></h1>
+<div>
+  <h1><%= @reunion.name %></h1>
   <p><%= @reunion.description %></p>
-</div>
 </div>
 <div class="cards-options mg-6">
   <%= render "date_options/reunion_date_block", reunion: @reunion, date_option: @date_option %>

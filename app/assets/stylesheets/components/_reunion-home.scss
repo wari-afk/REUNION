@@ -6,11 +6,12 @@ h1 {
   height: 50px;
   display: flex;
   align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 40px;
+  // margin-left: 10px;
+  // margin-right: 10px;
+  // margin-top: 10px;
   font-size: 50px;
-  color: #072e21;
+  padding: 32px;
+  color: $logogreen;
 }
 
 h3 {
@@ -35,33 +36,12 @@ p {
   font-weight: 300px;
   display: flex;
   align-items: center;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-}
 
-.h1-show-reunion {
-  justify-content: center;
-  font-weight: 300;
-  background-size: cover;
-  background-position: center;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  font-size: 50px;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.h2-show-reunion {
-  justify-content: center;
-  font-weight: 300;
-  background-size: cover;
-  background-position: center;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  font-size: 50px;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  // margin-left: 5px;
+  // margin-right: 5px;
+  // margin-top: 5px;
+  padding: 12px;
+  color: $grey;
 }
 
 .h3-show-reunion-info {

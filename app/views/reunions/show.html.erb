@@ -1,12 +1,19 @@
 <%# <div style="background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,254,255,1) 100%)"> %>
-<h1 class="h1-show-reunion"><%= @reunion.name %></h1>
-<p><%= @reunion.description %></p>
+
+<%# <div class="reunion-show-banner"> %>
+<div class="banner-reunion">
+  <h1><%= @reunion.name %></h1>
+  <p><%= @reunion.description %></p>
+</div>
+
 <div class="cards-options mg-6">
   <%= render "date_options/reunion_date_block", reunion: @reunion, date_option: @date_option %>
   <%= render "participations/reunion_participants_block", reunion: @reunion, participation: @participation %>
 </div>
+
 <% if @reunion.date_options.size >= 1 && @reunion.participations.size >= 1 %>
+
   <div class="container d-flex justify-content-center mb-6">
-    <%= link_to "Invite ready. Notify your friends!", reunion_date_options_path(@reunion), class: "btn-4" %>
+    <%= link_to "Invite ready. Notify your friends!", reunion_date_options_path(@reunion), class: "btn-4 mb-4" %>
   </div>
 <% end %>

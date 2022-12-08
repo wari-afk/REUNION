@@ -5,64 +5,74 @@
   </a>
 </div>
 
+<div data-controller="animation">
 
-<div style="padding: 30px;">
-  <h1> Participation Table, Votes are open!</h1>
-</div>
+  <div data-animation-target="hideOnAnimation">
+    <div style="padding: 30px;">
+      <h1>Votes are open!</h1>
+    </div>
 
-<!-- FORM FOR PARTICIPATION -->
-<% unless @reunion.user == current_user %>
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-12 col-md-6 offset-lg-3">
-        <div class="bg-white rounded p-3 shadow">
-          <%= form_with url: upvote_date_option_path do |f| %>
-            <ol>
-              <% @date_options.each do |date_option| %>
-                <%= date_option.start_date.strftime(("%b. %d. %Y")) %>
-                <%= date_option.end_date.strftime(("%b. %d. %Y")) %>
-                <%= f.check_box :date_option_ids, { multiple: true }, date_option.id, nil %>
+    <!-- FORM FOR PARTICIPATION -->
+    <% unless @reunion.user == current_user %>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md-6 offset-lg-3">
+            <div class="bg-white rounded p-3 shadow">
+              <%= form_with url: upvote_date_option_path do |f| %>
+                <ol>
+                  <% @date_options.each do |date_option| %>
+                    <%= date_option.start_date.strftime(("%b. %d. %Y")) %>
+                    <%= date_option.end_date.strftime(("%b. %d. %Y")) %>
+                    <%= f.check_box :date_option_ids, { multiple: true }, date_option.id, nil %>
+                  <% end %>
+                </ol>
+                <%= f.submit %>
               <% end %>
-            </ol>
-            <%= f.submit %>
-          <% end %>
-          <br>
-            <%# <div class="flash flash-success alert alert-dismissible fade show" role="alert">
-            <span><strong>Invite Sent!</strong> 🎉 Your votes are counted in!</span>
-            <a data-bs-dismiss="alert" aria-label="Close">
-              <i class="fas fa-times"></i>
-            </a>
-            </div> %>
+              <br>
+                <%# <div class="flash flash-success alert alert-dismissible fade show" role="alert">
+                <span><strong>Invite Sent!</strong> 🎉 Your votes are counted in!</span>
+                <a data-bs-dismiss="alert" aria-label="Close">
+                  <i class="fas fa-times"></i>
+                </a>
+                </div> %>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-<% end %>
-
-<!-- TABLE WITH VOTES -->
-<table class="table">
-  <thead>
-    <tr>
-      <th>Dates options</th>
-      <th>Votes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @date_options.each do |date_option| %>
-      <tr>
-        <th>
-          <li>
-            <%= date_option.start_date.strftime(("%b. %d. %Y")) %> -
-            <%= date_option.end_date.strftime(("%b. %d. %Y")) %>
-          </li>
-        </th>
-        <th>Votes: <%= date_option.votes_for.size %></th>
-      </tr>
     <% end %>
-  </tbody>
-</table>
-<br>
 
-<div class="btn-create-container">
-  <%= link_to "See our AI Generated Suggestions",  new_reunion_suggested_destination_path, class: "btn-1" %>
+    <!-- TABLE WITH VOTES -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Dates options</th>
+          <th>Votes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @date_options.each do |date_option| %>
+          <tr>
+            <th>
+                <%= date_option.start_date.strftime(("%b. %d. %Y")) %> -
+                <%= date_option.end_date.strftime(("%b. %d. %Y")) %>
+            </th>
+            <th><%= date_option.votes_for.size %></th>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+
+    <div class="btn-create-container">
+      <%= link_to "See our AI Generated Suggestions",  new_reunion_suggested_destination_path, class: "btn-1", data: { action: "click->animation#loadingSpinner" } %>
+    </div>
+
+  </div>
+
+  <div style="display: block; margin-left: auto; margin-right: auto; width: 40%;">
+    <%= image_tag "flight.gif", class: "d-none", data: { animation_target: "screen" } %>
+    <%= image_tag "second_flight.gif", class: "d-none", data: { animation_target: "screen" } %>
+    <%= image_tag "third_flight.gif", class: "d-none", data: { animation_target: "screen" } %>
+  </div>
+
 </div>

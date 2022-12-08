@@ -9,35 +9,15 @@
     <h2><%= @reunion.description %></h2>
   </div>
 </div>
-<div>
-  <p>Based on each of your crew member, we selected a city accessible to everyone!</p>
+
+<div class ="text-paragraph">
+  <h3>Based on each of your crew member, we selected a city accessible to everyone!</h3>
+
 </div>
 <div class="d-flex justify-content-center" data-controller="display-destination">
-  <div class="card-trip-reunion-crew m-1">
-    <div>
-      <h1 class="participants_title"><span class="participants-bottom">REUNION CREW</span></h1>
-      <ul>
-        <article class="participants_profile m-2">
-          <%= image_tag current_user.photo, class: "participants_picture" %>
-          <span class="participants_name">
-            <li><%= current_user.name %> - flying from <%= current_user.city_of_origin %></li>
-          </span>
-        </article>
-        <% @reunion.participations.each do |participation| %>
-          <article class="participants_profile m-2">
-            <%= image_tag participation.user.photo, class: "participants_picture" %>
-            <span class="participants_name">
-              <li><%= participation.user.name %> - flying from <%= participation.user.city_of_origin %> </li>
-            </span>
-          </article>
-        <%end %>
-      </ul>
-    </div>
-    <br>
-    <div class="button-another-suggestion">
-      <button class="btn-1" data-action="click->display-destination#nextCard">See another suggestion</button>
-    </div>
-  </div>
+
+  <%#= render "side_panel", user: current_user, reunion: @reunion %>
+  
   <div class="card-trip m-1">
     <% @trips.each do |trip| %>
       <div class="d-none" data-display-destination-target="card">
@@ -53,34 +33,41 @@
         </div>
         <div class="card-trip-infos">
           <%# =destinations['code']%>
-          <% trip['trips'].each do |trip| %>
+          <% trip['trips'].each_with_index do |trip, index| %>
             <div class="suggested-destination-card-category m-2" >
-              <p>
-                from <strong> <%= trip['origin']['city']['name'] %></strong>
+              <h3 class="summary-text">
+                <% if index == 0 %>
+                  <%= cl_image_tag @reunion.user.photo.key, class: "participants_picture" %> from <strong> <%= trip['origin']['city']['name'] %></strong>
+                <% else %>
+                  <%= cl_image_tag @reunion.participations[index -1].user.photo.key, class: "participants_picture" %> from <strong class="style=margin-left:12px;"> <%= trip['origin']['city']['name'] %></strong>
+                <% end %>
                 <%# <%= trip['destination']['city']['name'] %>
+              </h3>
+              <p class="summary-text">
+                <i class="fa-solid fa-euro-sign"></i><%= trip['bestPrice']%>€
               </p>
-              <p>
-                Price: <%= trip['bestPrice']%>€
+              <p class="summary-text">
+                <i class="fa-solid fa-plane-departure"></i><%= format_date_with_time(trip['departureTime']) %>
               </p>
-              <p>
-                <i class="fa-solid fa-plane-departure"></i>: <%= format_date_with_time(trip['departureTime']) %>
+              <p class="summary-text">
+                <i class="fa-solid fa-plane-arrival"></i> <%= format_date_with_time(trip['arrivalTime']) %>
               </p>
-              <p>
-                <i class="fa-solid fa-plane-arrival"></i>: <%= format_date_with_time(trip['arrivalTime']) %>
-              </p>
-              <p>
+              <p class="summary-text">
                 <% totaltime = (trip['duration'].to_i)
                 hours = (totaltime / 60)
                 minutes = (totaltime % 60) %>
-                Duration: <%= "#{hours}h #{minutes}min" %>
+                <i class="fa-solid fa-clock"></i><%= "#{hours}h #{minutes}min" %>
               </p>
-              <p>
+              <p class="summary-text">
                 <%= link_to "Book", "#", class: "btn-3" %>
               </p>
             </div>
           <% end %>
         </div>
-        <h2 class="card-trip-pricing">Total price for your group: <%=trip['totalPrice']%>€</h2>
+        <div class="suggested-destination-button">
+          <h3 class="home-page-text price-text">Total price for your group: <%=trip['totalPrice']%>€</h3>
+          <button class="btn-notify" data-action="click->display-destination#nextCard">See another suggestion</button>
+        </div>
       </div>
     <%end%>
   </div>

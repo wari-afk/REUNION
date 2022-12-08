@@ -51,29 +51,33 @@
 
 // principal button for homepage
 .btn-2 {
-  color: $darkgreen;
-  padding: 8px 24px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
   border-radius: 50px;
+  padding: 8px 24px;
   text-decoration: none;
-  height: 64px;
-  width: 600px;
-  font-size: 32px;
-  letter-spacing: 5px;
+  height: 54px;
+  width: 360px;
   letter-spacing: 0;
-  font-weight: bold;
+  transition: 0.2s all ease-in;
 }
 
 .btn-2:hover,
 .btn-2:active {
-  letter-spacing: 5px;
-  color: $darkgreen;
-  padding: 8px 24px;
-  border-radius: 50px;
-  text-decoration: none;
-  height: 64px;
-  width: 600px;
-  font-size: 32px;
-  letter-spacing: 5px;
+letter-spacing: 5px;
+background-color: $darkgreen;
+border: 1px solid $darkgreen;
+color: $lightgreen;
+padding: 8px 24px;
+// border-radius: 50px;
+text-decoration: none;
+height: 54px;
+width: 360px;
+font-size: 24px;
+letter-spacing: 3px;
 }
 
 .btn-2:after,
@@ -91,10 +95,10 @@
 
 .btn-2:hover:after,
 .btn-2:hover:before {
-  backface-visibility: hidden;
-  border-color: $darkgreen;
-  transition: width 350ms ease-in-out;
-  width: 70%;
+backface-visibility: hidden;
+border-color: $lightgreen;
+transition: width 350ms ease-in-out;
+width: 70%;
 }
 
 .btn-2:hover:before {

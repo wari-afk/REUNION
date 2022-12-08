@@ -134,23 +134,27 @@ padding: 0px;
 }
 
 .reunion-instructions {
-  background-color: $grey;
+  background-color: white;
   color: $darkgreen;
+  align-items: center;
+  padding: 24px;
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  margin: 12px;
   text-align: center;
-  padding: 12px;
 }
 
 .reunion-instructions h3 {
   color: $darkgreen;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .reunion-instructions p {
-  color: $darkgreen;
-  font-size: 16px;
+  color: $grey;
+  font-size: 14px;
 }
 
-// .reunion-instructions-cards {
-//   margin-top: none;
-//   margin-bottom: none;
-// }
+.reunion-instructions-cards img, svg {
+  width: 120px;
+}

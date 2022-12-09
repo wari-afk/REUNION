@@ -6,11 +6,11 @@
 <div class="reunion-show-banner-suggested text-center">
   <div class="container" >
     <h1 class="h1-show-reunion text-center"><%= @reunion.name %></h1>
-    <h2><%= @reunion.description %></h2>
+    <h2 class="h2-suggested-destination"><%= @reunion.description %></h2>
   </div>
 </div>
 <div class ="text-paragraph text-center">
-  <h3>Based on each of your crew member, we selected a city accessible to everyone!</h3>
+  <p>Based on each of your crew member, we selected a city accessible to everyone!</p>
 </div>
 <div class="d-flex justify-content-center" data-controller="display-destination">
   <%#= render "side_panel", user: current_user, reunion: @reunion %>
